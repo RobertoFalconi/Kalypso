@@ -1,2 +1,24 @@
-# Kalypso
-Kalypso è una web app di crittografia che si fonda sul principio di Kerckhoffs, il quale afferma che la sicurezza di un crittosistema non deve dipendere dall’occultazione dell’algoritmo, bensì dal tener segreta la chiave. 
+# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
