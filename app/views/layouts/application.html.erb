@@ -9,6 +9,19 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div clas="container">
+        <%= link_to "Kalypso", '#', id: "logo" %>
+        <nav>
+	  <ul class="nav navbar-nav pull-right">
+	    <li><%= link_to "Home",   '#' %></li>
+	    <li><%= link_to "Log in", '#' %></li>
+	  </ul>
+	</nav>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

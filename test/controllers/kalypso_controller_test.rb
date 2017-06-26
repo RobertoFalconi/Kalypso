@@ -7,6 +7,7 @@ class KalypsoControllerTest < ActionController::TestCase
     get :home #kalypso_home_url
     assert_response :success
     assert_select "title", "Home | Kalypso"
+
   end
 
   test "should get about" do
