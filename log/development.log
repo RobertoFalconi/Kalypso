@@ -1,0 +1,578 @@
+Started GET "/" for 127.0.0.1 at 2017-06-25 19:11:08 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.2.0/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.2.0/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb (6.8ms)
+Completed 200 OK in 875ms (Views: 22.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 11:41:33 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.2.0/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.2.0/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb (18.8ms)
+Completed 200 OK in 818ms (Views: 80.3ms)
+
+
+Started GET "/kalypso/home.html.erb" for 127.0.0.1 at 2017-06-26 11:42:17 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/kalypso/home.html.erb"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/kalypso/home.html" for 127.0.0.1 at 2017-06-26 11:42:26 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1819ms (Views: 1816.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 11:47:13 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 66ms (Views: 61.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 11:48:04 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 49ms (Views: 43.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 11:48:44 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 47ms (Views: 44.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-06-26 12:03:23 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/articles"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/kalypso/faq" for 127.0.0.1 at 2017-06-26 17:49:07 +0200
+Processing by KalypsoController#faq as HTML
+  Rendering kalypso/faq.html.erb within layouts/application
+  Rendered kalypso/faq.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 570ms (Views: 561.8ms)
+
+
+Started GET "/kalypso/faq" for 127.0.0.1 at 2017-06-26 17:49:45 +0200
+Processing by KalypsoController#faq as HTML
+  Rendering kalypso/faq.html.erb within layouts/application
+  Rendered kalypso/faq.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 149ms (Views: 140.5ms)
+
+
+Started GET "/kalypso/about" for 127.0.0.1 at 2017-06-26 17:49:54 +0200
+Processing by KalypsoController#about as HTML
+  Rendering kalypso/about.html.erb within layouts/application
+  Rendered kalypso/about.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 205ms (Views: 188.8ms)
+
+
+Started GET "/kalypso/home" for 127.0.0.1 at 2017-06-26 17:50:06 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 182ms (Views: 163.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 17:50:11 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 172ms (Views: 164.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 17:51:27 +0200
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:5:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/about" for 127.0.0.1 at 2017-06-26 17:51:33 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/about"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/about" for 127.0.0.1 at 2017-06-26 17:51:49 +0200
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:5:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/about" for 127.0.0.1 at 2017-06-26 17:52:28 +0200
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:5:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/about" for 127.0.0.1 at 2017-06-26 17:52:47 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/about"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/kalypso/about" for 127.0.0.1 at 2017-06-26 17:53:03 +0200
+Processing by KalypsoController#about as HTML
+  Rendering kalypso/about.html.erb within layouts/application
+  Rendered kalypso/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 46ms (Views: 44.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 18:37:43 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb
+  Rendered kalypso/home.html.erb (1.1ms)
+Completed 200 OK in 39ms (Views: 27.9ms)
+
+
+Started GET "/kalypso/about" for 127.0.0.1 at 2017-06-26 18:37:50 +0200
+Processing by KalypsoController#about as HTML
+  Rendering kalypso/about.html.erb
+  Rendered kalypso/about.html.erb (1.3ms)
+Completed 200 OK in 80ms (Views: 55.9ms)
+
+
+Started GET "/kalypso/faq" for 127.0.0.1 at 2017-06-26 18:38:01 +0200
+Processing by KalypsoController#faq as HTML
+  Rendering kalypso/faq.html.erb
+  Rendered kalypso/faq.html.erb (1.5ms)
+Completed 200 OK in 40ms (Views: 30.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 18:38:14 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb
+  Rendered kalypso/home.html.erb (1.4ms)
+Completed 200 OK in 40ms (Views: 31.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 18:52:04 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb
+  Rendered kalypso/home.html.erb (3.6ms)
+Completed 200 OK in 48ms (Views: 36.0ms)
+
+
+Started GET "/kalypso/faq" for 127.0.0.1 at 2017-06-26 18:52:10 +0200
+Processing by KalypsoController#faq as HTML
+  Rendering kalypso/faq.html.erb
+  Rendered kalypso/faq.html.erb (9.8ms)
+Completed 200 OK in 100ms (Views: 68.8ms)
+
+
+Started GET "/kalypso/about" for 127.0.0.1 at 2017-06-26 18:52:18 +0200
+Processing by KalypsoController#about as HTML
+  Rendering kalypso/about.html.erb
+  Rendered kalypso/about.html.erb (1.9ms)
+Completed 200 OK in 42ms (Views: 28.4ms)
+
+
+Started GET "/kalypso/about" for 127.0.0.1 at 2017-06-26 19:00:29 +0200
+Processing by KalypsoController#about as HTML
+  Rendering kalypso/about.html.erb within layouts/application
+  Rendered kalypso/about.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 167ms (Views: 154.6ms)
+
+
+Started GET "/kalypso/faq" for 127.0.0.1 at 2017-06-26 19:00:35 +0200
+Processing by KalypsoController#faq as HTML
+  Rendering kalypso/faq.html.erb within layouts/application
+  Rendered kalypso/faq.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 180ms (Views: 159.9ms)
+
+
+Started GET "/kalypso/home" for 127.0.0.1 at 2017-06-26 19:01:07 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 153ms (Views: 141.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 19:01:14 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 173ms (Views: 158.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 19:03:06 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 179ms (Views: 168.7ms)
+
+
+Started GET "/kalypso/home" for 127.0.0.1 at 2017-06-26 19:03:13 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/kalypso/home"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-06-26 19:03:39 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 163ms (Views: 152.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 19:26:55 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 49ms (Views: 46.7ms)
+
+
+Started GET "/kalypso/about" for 127.0.0.1 at 2017-06-26 19:35:53 +0200
+Processing by KalypsoController#about as HTML
+  Rendering kalypso/about.html.erb within layouts/application
+  Rendered kalypso/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 49ms (Views: 44.7ms)
+
+
+Started GET "/kalypso/faq" for 127.0.0.1 at 2017-06-26 19:35:57 +0200
+Processing by KalypsoController#faq as HTML
+  Rendering kalypso/faq.html.erb within layouts/application
+  Rendered kalypso/faq.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 45ms (Views: 42.4ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/-application.css"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.1) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.1) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/stylesheets/application.css"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.1) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.1) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-06-26 20:30:18 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 49ms (Views: 46.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 21:43:50 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 62ms (Views: 58.0ms)
+
+
+Started GET "/kalypso/about" for 127.0.0.1 at 2017-06-26 21:44:02 +0200
+Processing by KalypsoController#about as HTML
+  Rendering kalypso/about.html.erb within layouts/application
+  Rendered kalypso/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 79ms (Views: 75.4ms)
+
+
+Started GET "/kalypso/about" for 127.0.0.1 at 2017-06-26 21:44:05 +0200
+Processing by KalypsoController#about as HTML
+  Rendering kalypso/about.html.erb within layouts/application
+  Rendered kalypso/about.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 45ms (Views: 42.6ms)
+
+
+Started GET "/kalypso/about" for 127.0.0.1 at 2017-06-26 21:44:07 +0200
+Processing by KalypsoController#about as HTML
+  Rendering kalypso/about.html.erb within layouts/application
+  Rendered kalypso/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 43ms (Views: 40.1ms)
+
+
+Started GET "/kalypso/about" for 127.0.0.1 at 2017-06-26 21:44:08 +0200
+Processing by KalypsoController#about as HTML
+  Rendering kalypso/about.html.erb within layouts/application
+  Rendered kalypso/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 46ms (Views: 40.1ms)
+
+
+Started GET "/kalypso/about" for 127.0.0.1 at 2017-06-26 21:44:13 +0200
+Processing by KalypsoController#about as HTML
+  Rendering kalypso/about.html.erb within layouts/application
+  Rendered kalypso/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 50ms (Views: 46.8ms)
+
+
+Started GET "/kalypso/about" for 127.0.0.1 at 2017-06-26 21:55:47 +0200
+Processing by KalypsoController#about as HTML
+  Rendering kalypso/about.html.erb within layouts/application
+  Rendered kalypso/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 42ms (Views: 40.2ms)
+
+
+Started GET "/kalypso/about" for 127.0.0.1 at 2017-06-26 21:55:51 +0200
+Processing by KalypsoController#about as HTML
+  Rendering kalypso/about.html.erb within layouts/application
+  Rendered kalypso/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 46ms (Views: 41.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 21:55:56 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 53ms (Views: 50.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 22:17:57 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 3848ms
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-spockets.
+Load paths:
+  /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/config
+  /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/images
+  /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/javascripts
+  /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets
+  /var/lib/gems/2.2.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /var/lib/gems/2.2.0/gems/actioncable-5.1.1/lib/assets/compiled
+  /var/lib/gems/2.2.0/gems/actionview-5.1.1/lib/assets/compiled
+  /var/lib/gems/2.2.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/node_modules
+  /var/lib/gems/2.2.0/gems/bootstrap-sass-3.2.0.2/assets/stylesheets
+  /var/lib/gems/2.2.0/gems/bootstrap-sass-3.2.0.2/assets/javascripts
+  /var/lib/gems/2.2.0/gems/bootstrap-sass-3.2.0.2/assets/fonts
+  /var/lib/gems/2.2.0/gems/bootstrap-sass-3.2.0.2/assets/images
+  /var/lib/gems/2.2.0/gems/bootstrap-sass-3.2.0.2/assets/stylesheets):
+    4:     <title><%= yield(:title) %> | Kalypso</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/custom.css.scss:1
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3853714816361509678_43144440'
+Started GET "/" for 127.0.0.1 at 2017-06-26 23:07:54 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 11624ms (Views: 11066.3ms)
+
+
+Started GET "/kalypso/about" for 127.0.0.1 at 2017-06-26 23:14:04 +0200
+Processing by KalypsoController#about as HTML
+  Rendering kalypso/about.html.erb within layouts/application
+  Rendered kalypso/about.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 196ms (Views: 186.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 23:14:16 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 236ms (Views: 218.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 23:15:16 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 243ms (Views: 234.0ms)
+
+
