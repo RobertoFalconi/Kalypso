@@ -616,3 +616,155 @@ Processing by KalypsoController#home as HTML
 Completed 200 OK in 6137ms (Views: 6126.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-06-26 23:47:46 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 235ms (Views: 215.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 23:49:32 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 285ms (Views: 263.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 23:49:34 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 192ms (Views: 184.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 23:51:09 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 191ms (Views: 181.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 23:56:23 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 6435ms (Views: 6422.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 23:58:11 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 6232ms (Views: 6221.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 23:58:43 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 156ms (Views: 148.6ms)
+
+
+Started GET "/kalypso/about" for 127.0.0.1 at 2017-06-26 23:58:47 +0200
+Processing by KalypsoController#about as HTML
+  Rendering kalypso/about.html.erb within layouts/application
+  Rendered kalypso/about.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 226ms (Views: 208.1ms)
+
+
+Started GET "/kalypso/about" for 127.0.0.1 at 2017-06-26 23:59:38 +0200
+Processing by KalypsoController#about as HTML
+  Rendering kalypso/about.html.erb within layouts/application
+  Rendered kalypso/about.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 211ms (Views: 200.8ms)
+
+
+Started GET "/kalypso/about" for 127.0.0.1 at 2017-06-27 00:19:05 +0200
+Processing by KalypsoController#about as HTML
+  Rendering kalypso/about.html.erb within layouts/application
+  Rendered kalypso/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.3ms) [cache miss]
+  Rendered layouts/_header.html.erb (0.5ms) [cache miss]
+Completed 200 OK in 1902ms (Views: 1898.7ms)
+
+
+Started GET "/kalypso/about" for 127.0.0.1 at 2017-06-27 00:29:38 +0200
+Processing by KalypsoController#about as HTML
+  Rendering kalypso/about.html.erb within layouts/application
+  Rendered kalypso/about.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.7ms) [cache miss]
+  Rendered layouts/_header.html.erb (1.0ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.9ms) [cache miss]
+Completed 200 OK in 5761ms (Views: 5742.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-27 00:30:47 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_shim.html.erb (1.0ms) [cache miss]
+  Rendered layouts/_header.html.erb (1.4ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.7ms) [cache miss]
+Completed 200 OK in 227ms (Views: 219.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-27 00:34:48 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (7.1ms) [cache miss]
+  Rendered layouts/_header.html.erb (1.7ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.4ms) [cache miss]
+Completed 200 OK in 6555ms (Views: 6540.1ms)
+
+
+Started GET "/kalypso/about" for 127.0.0.1 at 2017-06-27 00:35:02 +0200
+Processing by KalypsoController#about as HTML
+  Rendering kalypso/about.html.erb within layouts/application
+  Rendered kalypso/about.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (1.8ms) [cache miss]
+  Rendered layouts/_header.html.erb (3.7ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.4ms) [cache miss]
+Completed 200 OK in 263ms (Views: 247.0ms)
+
+
+Started GET "/kalypso/about" for 127.0.0.1 at 2017-06-27 00:35:13 +0200
+Processing by KalypsoController#about as HTML
+  Rendering kalypso/about.html.erb within layouts/application
+  Rendered kalypso/about.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.9ms) [cache miss]
+  Rendered layouts/_header.html.erb (2.0ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.7ms) [cache miss]
+Completed 200 OK in 6265ms (Views: 6251.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-27 00:35:24 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (1.2ms) [cache miss]
+  Rendered layouts/_header.html.erb (2.4ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.9ms) [cache miss]
+Completed 200 OK in 314ms (Views: 294.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-27 00:42:06 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.8ms) [cache miss]
+  Rendered layouts/_header.html.erb (3.8ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.2ms) [cache miss]
+Completed 200 OK in 307ms (Views: 291.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-27 00:42:37 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_shim.html.erb (0.9ms) [cache miss]
+  Rendered layouts/_header.html.erb (1.2ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.9ms) [cache miss]
+Completed 200 OK in 323ms (Views: 303.9ms)
+
+

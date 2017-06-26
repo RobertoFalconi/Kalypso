@@ -28,7 +28,7 @@ textarea {
 
 /* typography */
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
@@ -53,14 +53,14 @@ p {
   line-height: 1.7em;
 }
 
-/*header*/
+/* header */
 
 #logo {
- float: left;
+  float: left;
   margin-right: 10px;
   font-size: 1.7em;
   color: #fff;
-  text-trasform: uppercase;
+  text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
@@ -69,4 +69,28 @@ p {
 #logo:hover {
   color: #fff;
   text-decoration: none;
+}
+
+/* footer */
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
 }
