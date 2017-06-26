@@ -576,3 +576,43 @@ Processing by KalypsoController#home as HTML
 Completed 200 OK in 243ms (Views: 234.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-06-26 23:33:36 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 87ms (Views: 84.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 23:33:38 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 67ms (Views: 63.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-26 23:43:48 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 78ms
+
+
+  
+ActionView::Template::Error (Invalid CSS after "  line-height 1": expected "{", was ";"):
+    4:     <title><%= yield(:title) %> | Kalypso</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/custom.css.scss:32
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2660824496028742008_70259017444180'
+Started GET "/" for 127.0.0.1 at 2017-06-26 23:44:16 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 6137ms (Views: 6126.0ms)
+
+
