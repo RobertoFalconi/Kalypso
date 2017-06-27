@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
-  get 'users/new'
 
-#  get 'kalypso/home'
+  root             'kalypso#home'
 
-  get 'kalypso/about'
-  get 'kalypso/faq'
-
-  root 'kalypso#home'
+  get 'about'   => 'kalypso#about' 
+  get 'faq'     => 'kalypso#faq'
+  get 'contact' => 'kalypso#contact'
+  get 'signup'  => 'users#new'
 
 end

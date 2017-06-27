@@ -13,7 +13,7 @@ class KalypsoControllerTest < ActionController::TestCase
   test "should get about" do
     get :about
     assert_response :success
-    assert_select "title", "About | Kalypso"
+    assert_select "title", "About Us | Kalypso"
 
   end
 
@@ -22,6 +22,12 @@ class KalypsoControllerTest < ActionController::TestCase
     assert_response :success
     assert_select "title", "F.A.Q. | Kalypso"
 
+  end
+
+  test "should get contact" do
+    get :contact
+    assert_response :success
+    assert_select "title","Contact Us | Kalypso"
   end
 
 end
