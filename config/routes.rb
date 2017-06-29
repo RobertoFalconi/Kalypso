@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get 'contact' => 'kalypso#contact'
   get 'signup'  => 'users#new'
 
+  resources :users
+
 end
