@@ -9113,3 +9113,1094 @@ Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.1ms)
 
 
 >>>>>>> 249ae015eebbaecc10812793371bb2f8cecf83bf
+Started GET "/" for 127.0.0.1 at 2017-06-30 23:20:29 +0200
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.1) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `call'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-06-30 23:21:44 +0200
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.1) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `call'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSubscribers (20170630205933)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (25.6ms)[0m  [1m[35mCREATE TABLE "subscribers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "source" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170630205933"]]
+  [1m[35m (94.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2017-06-30 23:22:21 +0200
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered subscribers/index.html.erb within layouts/application (64.8ms)
+  Rendered layouts/_shim.html.erb (1.9ms) [cache miss]
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (68.4ms) [cache miss]
+  Rendered layouts/_footer.html.erb (2.1ms) [cache miss]
+Completed 200 OK in 21500ms (Views: 21327.0ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-30 23:26:06 +0200
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered subscribers/index.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_shim.html.erb (2.5ms) [cache miss]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (21.0ms) [cache miss]
+  Rendered layouts/_footer.html.erb (2.3ms) [cache miss]
+Completed 200 OK in 523ms (Views: 496.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-30 23:45:22 +0200
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered subscribers/index.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_shim.html.erb (2.2ms) [cache miss]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (18.9ms) [cache miss]
+  Rendered layouts/_footer.html.erb (3.0ms) [cache miss]
+Completed 200 OK in 501ms (Views: 483.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-30 23:51:47 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_shim.html.erb (1.0ms) [cache miss]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (58.7ms) [cache miss]
+  Rendered layouts/_footer.html.erb (4.2ms) [cache miss]
+Completed 200 OK in 543ms (Views: 524.3ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-06-30 23:51:59 +0200
+  
+ActionController::RoutingError (uninitialized constant Subscribers):
+  
+activesupport (5.1.1) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.1) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.1) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.1) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.1) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.1) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `call'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/subscribers" for 127.0.0.1 at 2017-06-30 23:53:56 +0200
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered subscribers/index.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_shim.html.erb (1.0ms) [cache miss]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (46.7ms) [cache miss]
+  Rendered layouts/_footer.html.erb (2.1ms) [cache miss]
+Completed 200 OK in 575ms (Views: 497.6ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-06-30 23:54:11 +0200
+Processing by KalypsoController#contact as HTML
+  Rendering kalypso/contact.html.erb within layouts/application
+  Rendered kalypso/contact.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_shim.html.erb (1.6ms) [cache miss]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (15.4ms) [cache miss]
+  Rendered layouts/_footer.html.erb (2.4ms) [cache miss]
+Completed 200 OK in 450ms (Views: 419.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-06-30 23:58:07 +0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (170.2ms)
+  Rendered layouts/_shim.html.erb (1.2ms) [cache miss]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (56.2ms) [cache miss]
+  Rendered layouts/_footer.html.erb (2.9ms) [cache miss]
+Completed 200 OK in 774ms (Views: 742.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/subscribers" for 127.0.0.1 at 2017-07-01 00:06:52 +0200
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered subscribers/index.html.erb within layouts/application (16.1ms)
+  Rendered layouts/_shim.html.erb (1.8ms) [cache miss]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (17.5ms) [cache miss]
+  Rendered layouts/_footer.html.erb (4.1ms) [cache miss]
+Completed 200 OK in 669ms (Views: 646.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/subscribers" for 127.0.0.1 at 2017-07-01 00:09:01 +0200
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered subscribers/index.html.erb within layouts/application (47.1ms)
+Completed 500 Internal Server Error in 194ms (ActiveRecord: 8.6ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_error_message with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/views"
+):
+     8:   <div class="row">
+     9:     <div class="col-md-6 col-md-offset-3">
+    10:       <%= form_for @subscriber do |f| %>
+    11:         <%= render 'shared/error_message' %>
+    12:       
+    13: 	<%= f.label :name %>
+    14: 	<%= f.text_field :name, class: 'form-control' %>
+  
+app/views/subscribers/index.html.erb:11:in `block in _app_views_subscribers_index_html_erb___18118988416660876_69888027898880'
+app/views/subscribers/index.html.erb:10:in `_app_views_subscribers_index_html_erb___18118988416660876_69888027898880'
+Started GET "/subscribers" for 127.0.0.1 at 2017-07-01 00:09:59 +0200
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (20.0ms)
+  Rendered subscribers/index.html.erb within layouts/application (40.3ms)
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @user.errors.any? %>
+    2:   <div id="error_explanation">
+    3:     <div class="alert alert-danger">
+    4:       The form contains <%= pluralize(@user.errors.count, "error") %>
+  
+app/views/shared/_error_messages.html.erb:1:in `_app_views_shared__error_messages_html_erb___2462337105208052234_69887910384480'
+app/views/subscribers/index.html.erb:11:in `block in _app_views_subscribers_index_html_erb___18118988416660876_69887910199340'
+app/views/subscribers/index.html.erb:10:in `_app_views_subscribers_index_html_erb___18118988416660876_69887910199340'
+Started GET "/subscribers" for 127.0.0.1 at 2017-07-01 00:19:05 +0200
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (27.4ms)
+  Rendered subscribers/index.html.erb within layouts/application (60.3ms)
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @user.errors.any? %>
+    2:   <div id="error_explanation">
+    3:     <div class="alert alert-danger">
+    4:       The form contains <%= pluralize(@user.errors.count, "error") %>
+  
+app/views/shared/_error_messages.html.erb:1:in `_app_views_shared__error_messages_html_erb___2462337105208052234_69888028539620'
+app/views/subscribers/index.html.erb:11:in `block in _app_views_subscribers_index_html_erb___18118988416660876_69888030418200'
+app/views/subscribers/index.html.erb:10:in `_app_views_subscribers_index_html_erb___18118988416660876_69888030418200'
+Started GET "/subscribers" for 127.0.0.1 at 2017-07-01 00:19:37 +0200
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered shared/_contact_error_messages.html.erb (22.7ms)
+  Rendered subscribers/index.html.erb within layouts/application (48.7ms)
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @subscribes.errors.any? %>
+    2:   <div id="error_explanation">
+    3:     <div class="alert alert-danger">
+    4:       The form contains <%= pluralize(@subscribes.errors.count, "error") %>
+  
+app/views/shared/_contact_error_messages.html.erb:1:in `_app_views_shared__contact_error_messages_html_erb__4423024873837243825_69888041308780'
+app/views/subscribers/index.html.erb:11:in `block in _app_views_subscribers_index_html_erb___18118988416660876_69888041395500'
+app/views/subscribers/index.html.erb:10:in `_app_views_subscribers_index_html_erb___18118988416660876_69888041395500'
+Started GET "/subscribers" for 127.0.0.1 at 2017-07-01 00:24:17 +0200
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered shared/_contact_error_messages.html.erb (18.1ms)
+  Rendered subscribers/index.html.erb within layouts/application (51.8ms)
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 11.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @subscribes.errors.any? %>
+    2:   <div id="error_explanation">
+    3:     <div class="alert alert-danger">
+    4:       The form contains <%= pluralize(@subscribes.errors.count, "error") %>
+  
+app/views/shared/_contact_error_messages.html.erb:1:in `_app_views_shared__contact_error_messages_html_erb__4423024873837243825_69888027825960'
+app/views/subscribers/index.html.erb:11:in `block in _app_views_subscribers_index_html_erb___18118988416660876_69888027876580'
+app/views/subscribers/index.html.erb:10:in `_app_views_subscribers_index_html_erb___18118988416660876_69888027876580'
+Started GET "/subscribers" for 127.0.0.1 at 2017-07-01 00:26:37 +0200
+  
+SyntaxError (/mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/controllers/subscribers_controller.rb:26: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/subscribers_controller.rb:26: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/subscribers" for 127.0.0.1 at 2017-07-01 00:27:06 +0200
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered shared/_contact_error_messages.html.erb (16.5ms)
+  Rendered subscribers/index.html.erb within layouts/application (50.2ms)
+Completed 500 Internal Server Error in 233ms (ActiveRecord: 11.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @subscribes.errors.any? %>
+    2:   <div id="error_explanation">
+    3:     <div class="alert alert-danger">
+    4:       The form contains <%= pluralize(@subscribes.errors.count, "error") %>
+  
+app/views/shared/_contact_error_messages.html.erb:1:in `_app_views_shared__contact_error_messages_html_erb__4423024873837243825_69887909410740'
+app/views/subscribers/index.html.erb:11:in `block in _app_views_subscribers_index_html_erb___18118988416660876_69887909296160'
+app/views/subscribers/index.html.erb:10:in `_app_views_subscribers_index_html_erb___18118988416660876_69887909296160'
+Started GET "/subscribers" for 127.0.0.1 at 2017-07-01 00:28:10 +0200
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered shared/_contact_error_messages.html.erb (2.8ms) [cache miss]
+  Rendered subscribers/index.html.erb within layouts/application (36.1ms)
+  Rendered layouts/_shim.html.erb (1.7ms) [cache miss]
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (53.9ms) [cache miss]
+  Rendered layouts/_footer.html.erb (3.9ms) [cache miss]
+Completed 200 OK in 615ms (Views: 581.3ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/subscribers" for 127.0.0.1 at 2017-07-01 00:28:17 +0200
+Processing by SubscribersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jj/Po2l6DiBUHFbn5RFmZiV6GpAjFaLPt2De2Jnw4LZOXJ/vdUsn2Rh4Nm/B1w2XUJEwXhq2NqOCeLCwIcfCiA==", "subscriber"=>{"name"=>"ff", "email"=>""}, "commit"=>"Send"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubscriber Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "subscribers" WHERE LOWER("subscribers"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 319ms (ActiveRecord: 1.9ms)
+
+
+  
+NameError (undefined local variable or method `subcribes_path' for #<SubscribersController:0x007f20266cf000>):
+  
+app/controllers/subscribers_controller.rb:16:in `create'
+Started POST "/subscribers" for 127.0.0.1 at 2017-07-01 00:29:21 +0200
+Processing by SubscribersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jj/Po2l6DiBUHFbn5RFmZiV6GpAjFaLPt2De2Jnw4LZOXJ/vdUsn2Rh4Nm/B1w2XUJEwXhq2NqOCeLCwIcfCiA==", "subscriber"=>{"name"=>"ff", "email"=>""}, "commit"=>"Send"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubscriber Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "subscribers" WHERE LOWER("subscribers"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 336ms (ActiveRecord: 8.8ms)
+
+
+  
+NameError (undefined local variable or method `subcribers_path' for #<SubscribersController:0x007f202739bef0>):
+  
+app/controllers/subscribers_controller.rb:16:in `create'
+Started POST "/subscribers" for 127.0.0.1 at 2017-07-01 00:29:51 +0200
+Processing by SubscribersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jj/Po2l6DiBUHFbn5RFmZiV6GpAjFaLPt2De2Jnw4LZOXJ/vdUsn2Rh4Nm/B1w2XUJEwXhq2NqOCeLCwIcfCiA==", "subscriber"=>{"name"=>"ff", "email"=>""}, "commit"=>"Send"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubscriber Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "subscribers" WHERE LOWER("subscribers"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 89ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:29:51 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (1.3ms) [cache miss]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (42.1ms) [cache miss]
+  Rendered layouts/_footer.html.erb (2.2ms) [cache miss]
+Completed 200 OK in 516ms (Views: 494.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2017-07-01 00:30:00 +0200
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (1.4ms) [cache miss]
+  Rendered users/new.html.erb within layouts/application (33.6ms)
+  Rendered layouts/_shim.html.erb (1.3ms) [cache miss]
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (28.0ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.7ms) [cache miss]
+Completed 200 OK in 575ms (Views: 511.9ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-07-01 00:30:04 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mif7RcSnAyA9ehYjFvqhsgjUE9zisY2i3pWBgpUbg6Zc4fAyFmv4KvUjjzEoOdbZbyDRmGGXLLRnJMGYb/nEZg==", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (11.6ms) [cache miss]
+  Rendered users/new.html.erb within layouts/application (46.9ms)
+  Rendered layouts/_shim.html.erb (1.5ms) [cache miss]
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (19.2ms) [cache miss]
+  Rendered layouts/_footer.html.erb (2.6ms) [cache miss]
+Completed 200 OK in 694ms (Views: 660.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:35:22 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_shim.html.erb (1.3ms) [cache miss]
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (19.0ms) [cache miss]
+  Rendered layouts/_footer.html.erb (2.8ms) [cache miss]
+Completed 200 OK in 556ms (Views: 535.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-07-01 00:35:25 +0200
+Processing by KalypsoController#contact as HTML
+  Rendering kalypso/contact.html.erb within layouts/application
+  Rendered kalypso/contact.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_shim.html.erb (1.2ms) [cache miss]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (17.5ms) [cache miss]
+  Rendered layouts/_footer.html.erb (2.9ms) [cache miss]
+Completed 200 OK in 444ms (Views: 418.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-07-01 00:35:29 +0200
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (633.8ms)
+  Rendered layouts/_shim.html.erb (1.3ms) [cache miss]
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (17.6ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.6ms) [cache miss]
+Completed 200 OK in 1161ms (Views: 1072.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:44:14 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_shim.html.erb (1.7ms) [cache miss]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (20.1ms) [cache miss]
+  Rendered layouts/_footer.html.erb (2.7ms) [cache miss]
+Completed 200 OK in 443ms (Views: 423.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/subscribers" for 127.0.0.1 at 2017-07-01 00:44:20 +0200
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered shared/_subscribes_error_messages.html (1.7ms) [cache miss]
+  Rendered subscribers/index.html.erb within layouts/application (30.5ms)
+  Rendered layouts/_shim.html.erb (1.2ms) [cache miss]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (15.9ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.3ms) [cache miss]
+Completed 200 OK in 643ms (Views: 572.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/subscribers" for 127.0.0.1 at 2017-07-01 00:46:25 +0200
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered shared/_subscribes_error_messages.html.erb (1.5ms) [cache miss]
+  Rendered subscribers/index.html.erb within layouts/application (30.2ms)
+  Rendered layouts/_shim.html.erb (1.4ms) [cache miss]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (13.8ms) [cache miss]
+  Rendered layouts/_footer.html.erb (2.4ms) [cache miss]
+Completed 200 OK in 530ms (Views: 500.8ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/subscribers" for 127.0.0.1 at 2017-07-01 00:46:29 +0200
+Processing by SubscribersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FA55AcpBlWfyCboRHGryOFu3puhWiNEGE0ImCxicvLvUbSlN1nC8nr5t2pk4rJnJLlyMJm8rRWomWkhjoKuehQ==", "subscriber"=>{"name"=>"", "email"=>""}, "commit"=>"Send"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubscriber Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "subscribers" WHERE LOWER("subscribers"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 60ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:46:29 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_shim.html.erb (1.2ms) [cache miss]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (14.9ms) [cache miss]
+  Rendered layouts/_footer.html.erb (2.5ms) [cache miss]
+Completed 200 OK in 388ms (Views: 374.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/subscribers" for 127.0.0.1 at 2017-07-01 00:46:44 +0200
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered shared/_subscribes_error_messages.html.erb (1.4ms) [cache miss]
+  Rendered subscribers/index.html.erb within layouts/application (25.5ms)
+  Rendered layouts/_shim.html.erb (2.0ms) [cache miss]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (12.9ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.7ms) [cache miss]
+Completed 200 OK in 475ms (Views: 431.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/subscribers" for 127.0.0.1 at 2017-07-01 00:46:49 +0200
+Processing by SubscribersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"odQ9RDADfrepdiofrOc2uM7V19Isue4/iKyezKQvy3pht20ILDJXTuUSSpeIIV1Juz79HBUaelO9tPCkHBjpRA==", "subscriber"=>{"name"=>"", "email"=>""}, "commit"=>"Send"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubscriber Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "subscribers" WHERE LOWER("subscribers"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:46:49 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms) [cache miss]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (12.3ms) [cache miss]
+  Rendered layouts/_footer.html.erb (2.6ms) [cache miss]
+Completed 200 OK in 397ms (Views: 375.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/subscribers" for 127.0.0.1 at 2017-07-01 00:46:54 +0200
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered shared/_subscribes_error_messages.html.erb (1.5ms) [cache miss]
+  Rendered subscribers/index.html.erb within layouts/application (25.0ms)
+  Rendered layouts/_shim.html.erb (1.1ms) [cache miss]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (14.2ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.7ms) [cache miss]
+Completed 200 OK in 460ms (Views: 411.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/subscribers" for 127.0.0.1 at 2017-07-01 00:48:38 +0200
+  
+SyntaxError (/mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/controllers/subscribers_controller.rb:16: syntax error, unexpected ':', expecting keyword_end
+       notice: "Failed"
+              ^):
+  
+app/controllers/subscribers_controller.rb:16: syntax error, unexpected ':', expecting keyword_end
+Started GET "/subscribers" for 127.0.0.1 at 2017-07-01 00:49:53 +0200
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered shared/_subscribes_error_messages.html.erb (1.7ms) [cache miss]
+  Rendered subscribers/index.html.erb within layouts/application (28.4ms)
+  Rendered layouts/_shim.html.erb (0.9ms) [cache miss]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (38.1ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.7ms) [cache miss]
+Completed 200 OK in 528ms (Views: 450.4ms | ActiveRecord: 12.0ms)
+
+
+Started POST "/subscribers" for 127.0.0.1 at 2017-07-01 00:49:57 +0200
+Processing by SubscribersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L7nHqFQZ4YDci7mtSDnUSeiwShe74GpiZRtn2B8J6PHv2pfkSCjIeZDv2SVs/7+4nVtg2YJD/g5QAwmwpz7Kzw==", "subscriber"=>{"name"=>"", "email"=>""}, "commit"=>"Send"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubscriber Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "subscribers" WHERE LOWER("subscribers"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 330ms (ActiveRecord: 1.6ms)
+
+
+  
+NameError (undefined local variable or method `subscribers' for #<SubscribersController:0x007f20264f9118>):
+  
+app/controllers/subscribers_controller.rb:16:in `create'
+Started POST "/subscribers" for 127.0.0.1 at 2017-07-01 00:52:59 +0200
+Processing by SubscribersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L7nHqFQZ4YDci7mtSDnUSeiwShe74GpiZRtn2B8J6PHv2pfkSCjIeZDv2SVs/7+4nVtg2YJD/g5QAwmwpz7Kzw==", "subscriber"=>{"name"=>"", "email"=>""}, "commit"=>"Send"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubscriber Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "subscribers" WHERE LOWER("subscribers"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered shared/_subscribes_error_messages.html.erb (17.1ms)
+  Rendered subscribers/index.html.erb within layouts/application (68.0ms)
+Completed 500 Internal Server Error in 204ms (ActiveRecord: 9.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @subscriber.errors.any? %>
+    2:   <div id="error_explanation">
+    3:     <div class="alert alert-danger">
+    4:       The form contains <%= pluralize(@subscribes.errors.count, "error") %>
+    5:     </div>
+    6:     <ul>
+    7:     <% @subscriber.errors.full_messages.each do |msg| %>
+  
+app/views/shared/_subscribes_error_messages.html.erb:4:in `_app_views_shared__subscribes_error_messages_html_erb___3599391260892431065_69888027512200'
+app/views/subscribers/index.html.erb:11:in `block in _app_views_subscribers_index_html_erb___18118988416660876_69888028175560'
+app/views/subscribers/index.html.erb:10:in `_app_views_subscribers_index_html_erb___18118988416660876_69888028175560'
+app/controllers/subscribers_controller.rb:17:in `create'
+Started POST "/subscribers" for 127.0.0.1 at 2017-07-01 00:53:29 +0200
+Processing by SubscribersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L7nHqFQZ4YDci7mtSDnUSeiwShe74GpiZRtn2B8J6PHv2pfkSCjIeZDv2SVs/7+4nVtg2YJD/g5QAwmwpz7Kzw==", "subscriber"=>{"name"=>"", "email"=>""}, "commit"=>"Send"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubscriber Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "subscribers" WHERE LOWER("subscribers"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 8.5ms)
+
+
+  
+ActionView::MissingTemplate (Missing template subscribers/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/views"
+):
+  
+app/controllers/subscribers_controller.rb:17:in `create'
+Started POST "/subscribers" for 127.0.0.1 at 2017-07-01 00:55:25 +0200
+Processing by SubscribersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L7nHqFQZ4YDci7mtSDnUSeiwShe74GpiZRtn2B8J6PHv2pfkSCjIeZDv2SVs/7+4nVtg2YJD/g5QAwmwpz7Kzw==", "subscriber"=>{"name"=>"", "email"=>""}, "commit"=>"Send"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubscriber Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "subscribers" WHERE LOWER("subscribers"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 317ms (ActiveRecord: 9.8ms)
+
+
+  
+NameError (undefined local variable or method `subscribes' for #<SubscribersController:0x007f2025b95248>):
+  
+app/controllers/subscribers_controller.rb:17:in `create'
+Started POST "/subscribers" for 127.0.0.1 at 2017-07-01 00:55:49 +0200
+Processing by SubscribersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L7nHqFQZ4YDci7mtSDnUSeiwShe74GpiZRtn2B8J6PHv2pfkSCjIeZDv2SVs/7+4nVtg2YJD/g5QAwmwpz7Kzw==", "subscriber"=>{"name"=>"", "email"=>""}, "commit"=>"Send"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubscriber Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "subscribers" WHERE LOWER("subscribers"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 342ms (ActiveRecord: 9.6ms)
+
+
+  
+NameError (undefined local variable or method `subscribers' for #<SubscribersController:0x007f2026934e58>):
+  
+app/controllers/subscribers_controller.rb:17:in `create'
+Started POST "/subscribers" for 127.0.0.1 at 2017-07-01 00:56:29 +0200
+Processing by SubscribersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L7nHqFQZ4YDci7mtSDnUSeiwShe74GpiZRtn2B8J6PHv2pfkSCjIeZDv2SVs/7+4nVtg2YJD/g5QAwmwpz7Kzw==", "subscriber"=>{"name"=>"", "email"=>""}, "commit"=>"Send"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubscriber Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "subscribers" WHERE LOWER("subscribers"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000subscribers/index
+Completed 302 Found in 87ms (ActiveRecord: 10.4ms)
+
+
+Started POST "/subscribers" for 127.0.0.1 at 2017-07-01 00:56:32 +0200
+Processing by SubscribersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L7nHqFQZ4YDci7mtSDnUSeiwShe74GpiZRtn2B8J6PHv2pfkSCjIeZDv2SVs/7+4nVtg2YJD/g5QAwmwpz7Kzw==", "subscriber"=>{"name"=>"", "email"=>""}, "commit"=>"Send"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubscriber Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "subscribers" WHERE LOWER("subscribers"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000subscribers/index
+Completed 302 Found in 21ms (ActiveRecord: 1.7ms)
+
+
+Started POST "/subscribers" for 127.0.0.1 at 2017-07-01 00:56:36 +0200
+Processing by SubscribersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L7nHqFQZ4YDci7mtSDnUSeiwShe74GpiZRtn2B8J6PHv2pfkSCjIeZDv2SVs/7+4nVtg2YJD/g5QAwmwpz7Kzw==", "subscriber"=>{"name"=>"", "email"=>""}, "commit"=>"Send"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubscriber Exists (2.8ms)[0m  [1m[34mSELECT  1 AS one FROM "subscribers" WHERE LOWER("subscribers"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000subscribers/index
+Completed 302 Found in 27ms (ActiveRecord: 3.2ms)
+
+
+Started POST "/subscribers" for 127.0.0.1 at 2017-07-01 00:56:43 +0200
+Processing by SubscribersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L7nHqFQZ4YDci7mtSDnUSeiwShe74GpiZRtn2B8J6PHv2pfkSCjIeZDv2SVs/7+4nVtg2YJD/g5QAwmwpz7Kzw==", "subscriber"=>{"name"=>"", "email"=>""}, "commit"=>"Send"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubscriber Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "subscribers" WHERE LOWER("subscribers"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000subscribers/index
+Completed 302 Found in 77ms (ActiveRecord: 8.5ms)
+
+
+Started POST "/subscribers" for 127.0.0.1 at 2017-07-01 00:57:02 +0200
+Processing by SubscribersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L7nHqFQZ4YDci7mtSDnUSeiwShe74GpiZRtn2B8J6PHv2pfkSCjIeZDv2SVs/7+4nVtg2YJD/g5QAwmwpz7Kzw==", "subscriber"=>{"name"=>"", "email"=>""}, "commit"=>"Send"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubscriber Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "subscribers" WHERE LOWER("subscribers"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/subscribers
+Completed 302 Found in 68ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/subscribers" for 127.0.0.1 at 2017-07-01 00:57:02 +0200
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered shared/_subscribes_error_messages.html.erb (1.5ms) [cache miss]
+  Rendered subscribers/index.html.erb within layouts/application (26.4ms)
+  Rendered layouts/_shim.html.erb (1.5ms) [cache miss]
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (38.3ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.7ms) [cache miss]
+Completed 200 OK in 484ms (Views: 464.0ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/subscribers" for 127.0.0.1 at 2017-07-01 00:57:06 +0200
+Processing by SubscribersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1+Qm+F4Yn1JapIgfsTAdW50D2XGhbpbMPcVqgnH4/uUXh3a0Qim2qxbA6JeV9naq6Ojzv5jNAqAI3QTqyc/c2w==", "subscriber"=>{"name"=>"", "email"=>""}, "commit"=>"Send"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubscriber Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "subscribers" WHERE LOWER("subscribers"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/subscribers
+Completed 302 Found in 24ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/subscribers" for 127.0.0.1 at 2017-07-01 00:57:06 +0200
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered shared/_subscribes_error_messages.html.erb (1.6ms) [cache miss]
+  Rendered subscribers/index.html.erb within layouts/application (23.3ms)
+  Rendered layouts/_shim.html.erb (1.6ms) [cache miss]
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (20.4ms) [cache miss]
+  Rendered layouts/_footer.html.erb (2.8ms) [cache miss]
+Completed 200 OK in 512ms (Views: 493.1ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/subscribers" for 127.0.0.1 at 2017-07-01 00:57:23 +0200
+Processing by SubscribersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"60YzgLRyp4wX8+wVfQZFZvgKEQ7mlUsdVf5CJHkbQzgrJWPMqEOOdVuXjJ1ZwC6XjeE7wN8233Fg5ixMwSxhBg==", "subscriber"=>{"name"=>"aaa", "email"=>"prova@pippo.com"}, "commit"=>"Send"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubscriber Exists (2.4ms)[0m  [1m[34mSELECT  1 AS one FROM "subscribers" WHERE LOWER("subscribers"."email") = LOWER(?) LIMIT ?[0m  [["email", "prova@pippo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (9.6ms)[0m  [1m[32mINSERT INTO "subscribers" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "aaa"], ["email", "prova@pippo.com"], ["created_at", "2017-06-30 22:57:23.472257"], ["updated_at", "2017-06-30 22:57:23.472257"]]
+  [1m[35m (120.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 160ms (ActiveRecord: 133.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:57:23 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms) [cache miss]
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (15.8ms) [cache miss]
+  Rendered layouts/_footer.html.erb (2.3ms) [cache miss]
+Completed 200 OK in 474ms (Views: 451.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-07-01 00:58:21 +0200
+Processing by KalypsoController#contact as HTML
+  Rendering kalypso/contact.html.erb within layouts/application
+  Rendered kalypso/contact.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.9ms) [cache miss]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (10.2ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.5ms) [cache miss]
+Completed 200 OK in 392ms (Views: 374.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-07-01 01:02:09 +0200
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (31.1ms)
+  Rendered layouts/_shim.html.erb (0.9ms) [cache miss]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (54.6ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.7ms) [cache miss]
+Completed 200 OK in 500ms (Views: 469.7ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-07-01 01:05:53 +0200
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered shared/_contacts_error_messages.html.erb (1.5ms) [cache miss]
+  Rendered contacts/new.html.erb within layouts/application (36.8ms)
+  Rendered layouts/_shim.html.erb (1.0ms) [cache miss]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (12.2ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.6ms) [cache miss]
+Completed 200 OK in 519ms (Views: 491.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-07-01 01:06:01 +0200
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vBXTZ+c02n+NLtmYq6l0TH4PbjCJt9HClcU9U6NbbHt8doMr+wXzhsFKuRCPbx+9C+RE/rAURa6g3VM7G2xORQ==", "contact"=>{"name"=>"", "email"=>"", "message"=>""}, "commit"=>"Send message"}
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered shared/_contacts_error_messages.html.erb (5.6ms) [cache miss]
+  Rendered contacts/new.html.erb within layouts/application (29.7ms)
+  Rendered layouts/_shim.html.erb (0.9ms) [cache miss]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (12.6ms) [cache miss]
+  Rendered layouts/_footer.html.erb (2.2ms) [cache miss]
+Completed 200 OK in 468ms (Views: 460.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/subscribers" for 127.0.0.1 at 2017-07-01 01:06:19 +0200
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered shared/_subscribes_error_messages.html.erb (2.5ms) [cache miss]
+  Rendered subscribers/index.html.erb within layouts/application (34.8ms)
+  Rendered layouts/_shim.html.erb (1.3ms) [cache miss]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (10.8ms) [cache miss]
+  Rendered layouts/_footer.html.erb (2.1ms) [cache miss]
+Completed 200 OK in 506ms (Views: 427.5ms | ActiveRecord: 8.6ms)
+
+
+Started POST "/subscribers" for 127.0.0.1 at 2017-07-01 01:06:21 +0200
+Processing by SubscribersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W02OC9gnzw3Saft0AtWj4CXbb4Oca1HjETJxYFOvTtmbLt5HxBbm9J4Nm/wmE8gRUDBFTaXIxY8kKh8I65hs5w==", "subscriber"=>{"name"=>"", "email"=>""}, "commit"=>"Send"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubscriber Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "subscribers" WHERE LOWER("subscribers"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/subscribers
+Completed 302 Found in 29ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/subscribers" for 127.0.0.1 at 2017-07-01 01:06:21 +0200
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered shared/_subscribes_error_messages.html.erb (1.9ms) [cache miss]
+  Rendered subscribers/index.html.erb within layouts/application (26.9ms)
+  Rendered layouts/_shim.html.erb (1.0ms) [cache miss]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (11.9ms) [cache miss]
+  Rendered layouts/_footer.html.erb (2.7ms) [cache miss]
+Completed 200 OK in 464ms (Views: 446.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/subscribers" for 127.0.0.1 at 2017-07-01 01:08:23 +0200
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered shared/_subscribes_error_messages.html.erb (1.4ms) [cache miss]
+  Rendered subscribers/index.html.erb within layouts/application (26.6ms)
+  Rendered layouts/_shim.html.erb (1.3ms) [cache miss]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (36.1ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.7ms) [cache miss]
+Completed 200 OK in 543ms (Views: 466.2ms | ActiveRecord: 11.8ms)
+
+
+Started POST "/subscribers" for 127.0.0.1 at 2017-07-01 01:08:26 +0200
+Processing by SubscribersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bIwOJb1YY9JF4LkT45n/JtrMvodxCSlBUmFnwwgktbCs715poWlKKwmE2ZvHX5TXryeUSUiqvS1neQmrsBOXjg==", "subscriber"=>{"name"=>"", "email"=>""}, "commit"=>"Send"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubscriber Exists (2.8ms)[0m  [1m[34mSELECT  1 AS one FROM "subscribers" WHERE LOWER("subscribers"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::MissingTemplate (Missing template subscribers/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/views"
+):
+  
+app/controllers/subscribers_controller.rb:18:in `create'
+Started POST "/subscribers" for 127.0.0.1 at 2017-07-01 01:08:43 +0200
+Processing by SubscribersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bIwOJb1YY9JF4LkT45n/JtrMvodxCSlBUmFnwwgktbCs715poWlKKwmE2ZvHX5TXryeUSUiqvS1neQmrsBOXjg==", "subscriber"=>{"name"=>"", "email"=>""}, "commit"=>"Send"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubscriber Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "subscribers" WHERE LOWER("subscribers"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered shared/_subscribes_error_messages.html.erb (5.4ms) [cache miss]
+  Rendered subscribers/index.html.erb within layouts/application (28.6ms)
+  Rendered layouts/_shim.html.erb (1.1ms) [cache miss]
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (35.8ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.8ms) [cache miss]
+Completed 200 OK in 546ms (Views: 470.2ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/subscribers" for 127.0.0.1 at 2017-07-01 01:10:47 +0200
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered shared/_subscribes_error_messages.html.erb (2.7ms) [cache miss]
+  Rendered subscribers/index.html.erb within layouts/application (29.5ms)
+  Rendered layouts/_shim.html.erb (1.3ms) [cache miss]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (45.4ms) [cache miss]
+  Rendered layouts/_footer.html.erb (2.1ms) [cache miss]
+Completed 200 OK in 585ms (Views: 485.5ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-07-01 01:10:51 +0200
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered shared/_contacts_error_messages.html.erb (1.5ms) [cache miss]
+  Rendered contacts/new.html.erb within layouts/application (25.3ms)
+  Rendered layouts/_shim.html.erb (1.5ms) [cache miss]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (10.6ms) [cache miss]
+  Rendered layouts/_footer.html.erb (2.3ms) [cache miss]
+Completed 200 OK in 402ms (Views: 374.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-07-01 01:14:02 +0200
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered shared/_contacts_error_messages.html.erb (2.6ms) [cache miss]
+  Rendered contacts/new.html.erb within layouts/application (26.9ms)
+  Rendered layouts/_shim.html.erb (1.2ms) [cache miss]
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (48.0ms) [cache miss]
+  Rendered layouts/_footer.html.erb (436.5ms)
+Completed 500 Internal Server Error in 964ms (ActiveRecord: 5.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `subscribes_path' for #<#<Class:0x007f202734c990>:0x007f2027346b58>):
+     5:       <li><%= link_to "About Us",  about_path %></li>
+     6:       <li><%= link_to "Contact Us", contacts_path %></li>
+     7:       <li><%= link_to "F.A.Q.", faq_path %></li>
+     8:       <li><%= link_to "Newsletter", subscribes_path %></li>
+     9:     </ul>
+    10:   </nav>
+    11: </footer>
+  
+app/views/layouts/_footer.html.erb:8:in `_app_views_layouts__footer_html_erb___2794605292639565756_69888029350940'
+app/views/layouts/application.html.erb:18:in `_app_views_layouts_application_html_erb__787521850767761699_69888036632700'
+Started GET "/contacts" for 127.0.0.1 at 2017-07-01 01:14:19 +0200
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered shared/_contacts_error_messages.html.erb (2.1ms) [cache miss]
+  Rendered contacts/new.html.erb within layouts/application (25.9ms)
+  Rendered layouts/_shim.html.erb (1.0ms) [cache miss]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (11.2ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.9ms) [cache miss]
+Completed 200 OK in 484ms (Views: 456.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/subscribers" for 127.0.0.1 at 2017-07-01 01:14:29 +0200
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered shared/_subscribes_error_messages.html.erb (1.5ms) [cache miss]
+  Rendered subscribers/index.html.erb within layouts/application (25.4ms)
+  Rendered layouts/_shim.html.erb (0.9ms) [cache miss]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (9.3ms) [cache miss]
+  Rendered layouts/_footer.html.erb (2.0ms) [cache miss]
+Completed 200 OK in 416ms (Views: 356.8ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/faq" for 127.0.0.1 at 2017-07-01 01:14:36 +0200
+Processing by KalypsoController#faq as HTML
+  Rendering kalypso/faq.html.erb within layouts/application
+  Rendered kalypso/faq.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms) [cache miss]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (9.4ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.7ms) [cache miss]
+Completed 200 OK in 363ms (Views: 343.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-07-01 01:14:42 +0200
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered shared/_contacts_error_messages.html.erb (1.5ms) [cache miss]
+  Rendered contacts/new.html.erb within layouts/application (24.9ms)
+  Rendered layouts/_shim.html.erb (1.1ms) [cache miss]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (11.6ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.7ms) [cache miss]
+Completed 200 OK in 422ms (Views: 381.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-07-01 01:14:44 +0200
+Processing by KalypsoController#about as HTML
+  Rendering kalypso/about.html.erb within layouts/application
+  Rendered kalypso/about.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.9ms) [cache miss]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (7.8ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.9ms) [cache miss]
+Completed 200 OK in 460ms (Views: 427.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-01 01:14:51 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_shim.html.erb (1.3ms) [cache miss]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (8.5ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.7ms) [cache miss]
+Completed 200 OK in 414ms (Views: 384.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-01 01:14:54 +0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_shim.html.erb (1.0ms) [cache miss]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (9.2ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.8ms) [cache miss]
+Completed 200 OK in 355ms (Views: 336.4ms | ActiveRecord: 1.0ms)
+
+
