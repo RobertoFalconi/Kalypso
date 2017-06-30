@@ -6163,3 +6163,47 @@ Completed 200 OK in 1251ms (Views: 1236.9ms | ActiveRecord: 1.1ms)
   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
   [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
 >>>>>>> 802b7934c7262ccb6609a3d859e8d52506000a34
+Started GET "/" for 127.0.0.1 at 2017-06-30 14:59:16 +0200
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.1) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `call'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
