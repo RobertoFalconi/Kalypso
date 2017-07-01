@@ -11444,3 +11444,74 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 64ms (Views: 59.1ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/about" for 127.0.0.1 at 2017-07-01 08:55:57 +0200
+Processing by KalypsoController#about as HTML
+  Rendering kalypso/about.html.erb within layouts/application
+  Rendered kalypso/about.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.4ms) [cache miss]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.5ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.5ms) [cache miss]
+Completed 200 OK in 51ms (Views: 48.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-01 10:04:09 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Started GET "/contacts" for 127.0.0.1 at 2017-07-01 10:04:09 +0200
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/about" for 127.0.0.1 at 2017-07-01 10:04:09 +0200
+Started GET "/users/1" for 127.0.0.1 at 2017-07-01 10:04:09 +0200
+Started GET "/about" for 127.0.0.1 at 2017-07-01 10:04:09 +0200
+Processing by ContactsController#new as HTML
+Processing by KalypsoController#about as HTML
+Processing by UsersController#show as HTML
+Processing by KalypsoController#about as HTML
+  Rendering users/show.html.erb within layouts/application
+  Rendering contacts/new.html.erb within layouts/application
+  Rendering kalypso/about.html.erb within layouts/application
+  Parameters: {"id"=>"1"}
+  Rendering kalypso/about.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+  Rendered shared/_contacts_error_messages.html.erb (0.4ms) [cache miss]
+  Rendered kalypso/about.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered kalypso/about.html.erb within layouts/application (0.0ms)
+  Rendered contacts/new.html.erb within layouts/application (6.7ms)
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_shim.html.erb (0.3ms) [cache miss]
+  Rendered layouts/_shim.html.erb (0.0ms) [cache miss]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_shim.html.erb (0.0ms) [cache miss]
+  Rendered layouts/_shim.html.erb (0.0ms) [cache miss]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_shim.html.erb (0.2ms) [cache miss]
+  Rendered layouts/_header.html.erb (14.9ms) [cache miss]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (11.7ms) [cache miss]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (6.4ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.5ms) [cache miss]
+  Rendered layouts/_header.html.erb (6.4ms) [cache miss]
+  Rendered layouts/_header.html.erb (3.6ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.2ms) [cache miss]
+Completed 200 OK in 208ms (Views: 202.3ms | ActiveRecord: 0.4ms)
+
+
+  Rendered layouts/_footer.html.erb (0.2ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.2ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.3ms) [cache miss]
+Completed 200 OK in 195ms (Views: 193.3ms | ActiveRecord: 0.2ms)
+
+
+Completed 200 OK in 205ms (Views: 202.4ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 201ms (Views: 199.4ms | ActiveRecord: 0.4ms)
+
+
+Completed 200 OK in 191ms (Views: 167.8ms | ActiveRecord: 0.2ms)
+
+
