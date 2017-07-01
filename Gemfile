@@ -5,6 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# Cryptography algorithm
+
+gem ‘gibberish’
+
 # Bundle for Contact Us form
 gem 'mail_form'
 gem 'simple_form'
