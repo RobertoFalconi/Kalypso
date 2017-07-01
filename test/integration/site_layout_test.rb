@@ -10,7 +10,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_template 'kalypso/home'
     assert_select "a[href=?]", root_path, count:2 #because we have two link for home 
     assert_select "a[href=?]", about_path
-    assert_select "a[href=?]", contact_path
+    assert_select "a[href=?]", contacts_path
     assert_select "a[href=?]", signup_path
   end
 
