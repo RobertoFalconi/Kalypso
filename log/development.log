@@ -11335,3 +11335,112 @@ Processing by KalypsoController#faq as HTML
 Completed 200 OK in 47ms (Views: 44.5ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/faq" for 127.0.0.1 at 2017-07-01 08:41:24 +0200
+Processing by KalypsoController#faq as HTML
+  Rendering kalypso/faq.html.erb within layouts/application
+  Rendered kalypso/faq.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.4ms) [cache miss]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.7ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.6ms) [cache miss]
+Completed 200 OK in 1880ms (Views: 1878.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-01 08:44:59 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.3ms) [cache miss]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.4ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.5ms) [cache miss]
+Completed 200 OK in 69ms (Views: 65.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-07-01 08:45:03 +0200
+Processing by KalypsoController#about as HTML
+  Rendering kalypso/about.html.erb within layouts/application
+  Rendered kalypso/about.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms) [cache miss]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.4ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.5ms) [cache miss]
+Completed 200 OK in 78ms (Views: 75.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-07-01 08:45:06 +0200
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered shared/_contacts_error_messages.html.erb (0.4ms) [cache miss]
+  Rendered contacts/new.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_shim.html.erb (0.3ms) [cache miss]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.5ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.6ms) [cache miss]
+Completed 200 OK in 54ms (Views: 52.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/faq" for 127.0.0.1 at 2017-07-01 08:45:14 +0200
+Processing by KalypsoController#faq as HTML
+  Rendering kalypso/faq.html.erb within layouts/application
+  Rendered kalypso/faq.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.5ms) [cache miss]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.6ms) [cache miss]
+Completed 200 OK in 50ms (Views: 47.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subscribers" for 127.0.0.1 at 2017-07-01 08:45:22 +0200
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  Rendered shared/_subscribes_error_messages.html.erb (0.3ms) [cache miss]
+  Rendered subscribers/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_shim.html.erb (0.3ms) [cache miss]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.6ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.7ms) [cache miss]
+Completed 200 OK in 51ms (Views: 48.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-01 08:45:32 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.5ms) [cache miss]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.6ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.5ms) [cache miss]
+Completed 200 OK in 57ms (Views: 52.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-01 08:45:36 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.3ms) [cache miss]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.5ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.9ms) [cache miss]
+Completed 200 OK in 43ms (Views: 39.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-01 08:45:46 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.3ms) [cache miss]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.7ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.7ms) [cache miss]
+Completed 200 OK in 64ms (Views: 59.1ms | ActiveRecord: 0.4ms)
+
+
