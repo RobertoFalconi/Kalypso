@@ -7,7 +7,7 @@ end
 
 # Cryptography algorithm
 
-gem ‘gibberish’
+gem 'gibberish'
 
 # Bundle for Contact Us form
 gem 'mail_form'
