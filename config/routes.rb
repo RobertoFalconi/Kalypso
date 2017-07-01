@@ -6,10 +6,12 @@ Rails.application.routes.draw do
 	
 #  get 'subscribers' => 'subscribers/index'
 
-	match '/contacts',     to: 'contacts#new',             via: 'get'
-	resources "contacts", only: [:new, :create]
- 
+  match '/contacts', to: 'contacts#new', 					via: 'get'
 	
+  resources "contacts", only: [:new, :create]
+
+#  get 'message and key' 
+  
 	
   get 'sessions/new'
 
