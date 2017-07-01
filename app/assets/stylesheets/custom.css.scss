@@ -9,6 +9,9 @@ $gray-medium-light: #eaeaea;
   -moz-box-sizing:     border-box;
   -webkit-box-sizing:  border-box;
   box-sizing:          border-box;
+  	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 }
 
 /* universal */
@@ -18,7 +21,7 @@ html {
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 90px;
 }
 
 section {
@@ -76,6 +79,7 @@ p {
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
+	
 
   &:hover {
     color: white;
@@ -83,6 +87,13 @@ p {
   }
 
 }
+
+navbar navbar-fixed-top navbar-inverse {
+		-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
 
 /* footer */
 footer {
