@@ -7,8 +7,14 @@
 		<%= f.text_field :key, class: 'form-control' %>
 		<%= f.label :messaggio %>
 		<%= f.text_area :messaggio, class: 'form-control' %>
+		
+		<%= f.label :'time-out' %>
+		<%= f.date_select :datepicker, class: 'form-control' %>
+		
 		<%= f.submit "Encrypt message", class: "btn btn-primary" %></br></br>
 		<%= f.submit "Decrypt message", class: "btn btn-primary" %>
 		<% end %>
+		<html lang="en">
+
 	</div>
 </div>
