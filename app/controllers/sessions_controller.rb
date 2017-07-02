@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       #log the user in and redirect to the user's show page
       log_in user
       remember user
-      redirect_to user # -> user_url(user)
+      redirect_back_or user # -> user_url(user)
     else
        flash.now[:danger] = 'Invalid email/password combination'
        render 'new'
