@@ -20779,3 +20779,353 @@ Processing by UsersController#edit as HTML
 Completed 200 OK in 137ms (Views: 131.6ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-07-03 10:43:36 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.7ms) [cache miss]
+  Rendered users/_form.html.erb (4.4ms) [cache miss]
+  Rendered users/edit.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms) [cache miss]
+  Rendered layouts/_header.html.erb (0.8ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.5ms) [cache miss]
+Completed 200 OK in 141ms (Views: 136.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-07-03 10:43:37 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (1.3ms) [cache miss]
+  Rendered users/_form.html.erb (5.5ms) [cache miss]
+  Rendered users/edit.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_shim.html.erb (0.3ms) [cache miss]
+  Rendered layouts/_header.html.erb (0.7ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.5ms) [cache miss]
+Completed 200 OK in 145ms (Views: 137.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-07-03 10:43:40 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.6ms) [cache miss]
+  Rendered users/_form.html.erb (5.5ms) [cache miss]
+  Rendered users/edit.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_shim.html.erb (0.5ms) [cache miss]
+  Rendered layouts/_header.html.erb (0.8ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.6ms) [cache miss]
+Completed 200 OK in 144ms (Views: 137.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-03 10:43:41 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (0.4ms) [cache miss]
+  Rendered layouts/_header.html.erb (1.1ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.6ms) [cache miss]
+Completed 200 OK in 168ms (Views: 160.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-07-03 10:43:42 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms) [cache miss]
+  Rendered users/_form.html.erb (4.2ms) [cache miss]
+  Rendered users/edit.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_shim.html.erb (0.3ms) [cache miss]
+  Rendered layouts/_header.html.erb (0.8ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.5ms) [cache miss]
+Completed 200 OK in 143ms (Views: 137.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-07-03 10:43:49 +0200
+Processing by KalypsoController#about as HTML
+  Rendering kalypso/about.html.erb within layouts/application
+  Rendered kalypso/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.6ms) [cache miss]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.4ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.4ms) [cache miss]
+Completed 200 OK in 119ms (Views: 116.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-07-03 10:43:51 +0200
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered shared/_contacts_error_messages.html.erb (0.4ms) [cache miss]
+  Rendered contacts/new.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_shim.html.erb (0.3ms) [cache miss]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.5ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.6ms) [cache miss]
+Completed 200 OK in 141ms (Views: 130.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/faq" for 127.0.0.1 at 2017-07-03 10:43:53 +0200
+Processing by KalypsoController#faq as HTML
+  Rendering kalypso/faq.html.erb within layouts/application
+  Rendered kalypso/faq.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.6ms) [cache miss]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.6ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.7ms) [cache miss]
+Completed 200 OK in 130ms (Views: 127.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-03 10:44:03 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (14.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms) [cache miss]
+  Rendered layouts/_header.html.erb (0.8ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.6ms) [cache miss]
+Completed 200 OK in 159ms (Views: 152.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-03 10:50:03 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 580ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (CssSyntaxError: /Users/robertofalconi/Laboratorio/Kalypso/app/assets/stylesheets/application.css:18:1: Unknown word
+
+  16 | 
+  17 | 
+> 18 | *= require bootstrap-datepicker
+     | ^
+  19 | 
+):
+    3:   <head>
+    4:     <title><%= yield(:title) %> | Kalypso</title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    7:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    8:     <%= render 'layouts/shim' %>
+    9:   </head>
+  
+app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__2812343277213197460_70184556978120'
+Started GET "/" for 127.0.0.1 at 2017-07-03 10:50:23 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 538ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap-datepicker3' with type 'application/javascript'
+Checked in these paths: 
+  /Users/robertofalconi/Laboratorio/Kalypso/app/assets/config
+  /Users/robertofalconi/Laboratorio/Kalypso/app/assets/images
+  /Users/robertofalconi/Laboratorio/Kalypso/app/assets/javascripts
+  /Users/robertofalconi/Laboratorio/Kalypso/app/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /usr/local/lib/ruby/gems/2.4.0/gems/jquery-rails-4.3.1/vendor/assets/javascripts
+  /usr/local/lib/ruby/gems/2.4.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/javascripts
+  /usr/local/lib/ruby/gems/2.4.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.4.0/gems/actioncable-5.1.1/lib/assets/compiled
+  /usr/local/lib/ruby/gems/2.4.0/gems/actionview-5.1.1/lib/assets/compiled
+  /usr/local/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /Users/robertofalconi/Laboratorio/Kalypso/node_modules
+  /usr/local/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.2.0.2/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.2.0.2/assets/javascripts
+  /usr/local/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.2.0.2/assets/fonts
+  /usr/local/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.2.0.2/assets/images
+  /usr/local/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.2.0.2/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.2.0.2/assets/javascripts):
+    3:   <head>
+    4:     <title><%= yield(:title) %> | Kalypso</title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    7:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    8:     <%= render 'layouts/shim' %>
+    9:   </head>
+  
+app/assets/javascripts/application.js:20
+app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__2812343277213197460_70184563397000'
+Started GET "/" for 127.0.0.1 at 2017-07-03 10:50:36 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 489ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap-datepicker3' with type 'application/javascript'
+Checked in these paths: 
+  /Users/robertofalconi/Laboratorio/Kalypso/app/assets/config
+  /Users/robertofalconi/Laboratorio/Kalypso/app/assets/images
+  /Users/robertofalconi/Laboratorio/Kalypso/app/assets/javascripts
+  /Users/robertofalconi/Laboratorio/Kalypso/app/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /usr/local/lib/ruby/gems/2.4.0/gems/jquery-rails-4.3.1/vendor/assets/javascripts
+  /usr/local/lib/ruby/gems/2.4.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/javascripts
+  /usr/local/lib/ruby/gems/2.4.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.4.0/gems/actioncable-5.1.1/lib/assets/compiled
+  /usr/local/lib/ruby/gems/2.4.0/gems/actionview-5.1.1/lib/assets/compiled
+  /usr/local/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /Users/robertofalconi/Laboratorio/Kalypso/node_modules
+  /usr/local/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.2.0.2/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.2.0.2/assets/javascripts
+  /usr/local/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.2.0.2/assets/fonts
+  /usr/local/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.2.0.2/assets/images
+  /usr/local/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.2.0.2/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.2.0.2/assets/javascripts):
+    3:   <head>
+    4:     <title><%= yield(:title) %> | Kalypso</title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    7:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    8:     <%= render 'layouts/shim' %>
+    9:   </head>
+  
+app/assets/javascripts/application.js:20
+app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__2812343277213197460_70184606402160'
+Started GET "/" for 127.0.0.1 at 2017-07-03 10:50:42 +0200
+Processing by KalypsoController#home as HTML
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms) [cache miss]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (53.3ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.5ms) [cache miss]
+Completed 200 OK in 471ms (Views: 468.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-07-03 10:50:46 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.4ms) [cache miss]
+  Rendered users/_form.html.erb (13.4ms) [cache miss]
+  Rendered users/edit.html.erb within layouts/application (14.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms) [cache miss]
+  Rendered layouts/_header.html.erb (0.9ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.6ms) [cache miss]
+Completed 200 OK in 147ms (Views: 140.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-03 10:50:47 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms) [cache miss]
+  Rendered layouts/_header.html.erb (0.8ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.8ms) [cache miss]
+Completed 200 OK in 174ms (Views: 165.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-03 10:52:37 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_shim.html.erb (0.3ms) [cache miss]
+  Rendered layouts/_header.html.erb (0.7ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.6ms) [cache miss]
+Completed 200 OK in 105ms (Views: 102.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-03 10:54:07 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/Users/robertofalconi/Laboratorio/Kalypso/app/views/users/show.html.erb:13: syntax error, unexpected tSTRING_BEG, expecting ')'
+ffer.append=( f.label :mydate' );@output_buffer.safe_append=
+                              ^
+/Users/robertofalconi/Laboratorio/Kalypso/app/views/users/show.html.erb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+=( f.text_field :mydate, 'data-behaviour' => 'datepicker' );
+                              ^
+/Users/robertofalconi/Laboratorio/Kalypso/app/views/users/show.html.erb:14: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+ield :mydate, 'data-behaviour' => 'datepicker' );@output_buf
+                              ^
+/Users/robertofalconi/Laboratorio/Kalypso/app/views/users/show.html.erb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+data-behaviour' => 'datepicker' );@output_buffer.safe_append
+                              ^
+/Users/robertofalconi/Laboratorio/Kalypso/app/views/users/show.html.erb:15: syntax error, unexpected '<', expecting ')'
+		<script type="text/javascript">
+		 ^
+/Users/robertofalconi/Laboratorio/Kalypso/app/views/users/show.html.erb:16: `$(' is not allowed as a global variable name
+/Users/robertofalconi/Laboratorio/Kalypso/app/views/users/show.html.erb:16: syntax error, unexpected end-of-input
+		  $(\'[data-behaviour~=datepicker
+		   ^):
+  
+app/views/users/show.html.erb:13: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/users/show.html.erb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/users/show.html.erb:14: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/users/show.html.erb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/users/show.html.erb:15: syntax error, unexpected '<', expecting ')'
+app/views/users/show.html.erb:16: `$(' is not allowed as a global variable name
+app/views/users/show.html.erb:16: syntax error, unexpected end-of-input
+Started GET "/users/1" for 127.0.0.1 at 2017-07-03 10:54:20 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.3ms) [cache miss]
+  Rendered layouts/_header.html.erb (0.7ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.5ms) [cache miss]
+Completed 200 OK in 110ms (Views: 106.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-03 10:54:48 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.3ms) [cache miss]
+  Rendered layouts/_header.html.erb (0.7ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.5ms) [cache miss]
+Completed 200 OK in 107ms (Views: 104.0ms | ActiveRecord: 0.2ms)
+
+
