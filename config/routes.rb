@@ -22,12 +22,11 @@ Rails.application.routes.draw do
 
   get    'about'   => 'kalypso#about' 
   get    'faq'     => 'kalypso#faq'
-
   get    'signup'  => 'users#new'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
-  delete 'logout'  => 'sessions#destroy'
 
+  delete 'logout'  => 'sessions#destroy'
   resources :users
 
 end

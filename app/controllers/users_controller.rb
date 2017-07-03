@@ -1,11 +1,21 @@
 class UsersController < ApplicationController
 
   before_action :logged_in_user, only: [ :edit, :update, :show, :destroy]
-  before_action :admin_user, only: [ :index]
+  before_action :admin_user, only: [ :index, :ban, :unban]
   before_action :correct_user, only: [ :edit, :update, :show]
 
   def show
     @user = User.find(params[:id])
+  end
+
+  def ban
+    User.find(params[:id]).update_attributes(banned: 't')
+    flash[:success] = "User banned"
+  end
+
+  def unban
+    User.find(params[:id]).update_attributes(banned: 'f')
+    flash[:success] = "User unbanned"
   end
 
   def new
