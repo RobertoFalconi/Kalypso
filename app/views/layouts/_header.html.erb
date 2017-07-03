@@ -1,16 +1,16 @@
 <head>
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-	<% if logged_in? %>
-      <%= link_to "kalypso", '#', id: "logo" %>
-	<% else %>
-	  <%= link_to "kalypso", root_path, id: "logo" %>
-	<% end %>
+  <header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <% if logged_in? %>
+        <%= link_to "kalypso", '#', id: "logo" %>
+      <% else %>
+        <%= link_to "kalypso", root_path, id: "logo" %>
+      <% end %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
         
         <% if logged_in? %>
-		  <li><%= link_to "Home", current_user %></li>
+		  <li><%= link_to "Home" , current_user %></li>
 
           <% if current_user.admin? %>
                     <li><%= link_to "Users", users_path %></li>
@@ -33,6 +33,7 @@
         <% else %>
 		  <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Log in", login_path %></li>
+          <li><%= link_to "Sign up", signup_path %></li>
         <% end %>
       </ul>
     </nav>

@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
+    return redirect_to(current_user) if current_user.present?
   end
 
   def create
