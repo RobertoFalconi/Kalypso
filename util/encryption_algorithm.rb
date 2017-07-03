@@ -51,9 +51,9 @@ end
 
 ## TEST ##
 
-#puts encrypt('tvb', 'infinito', '2017/07/07')
+#puts encrypt('ciao bò come stai?', 'tvb', '2017/07/02')
 
-#puts decrypt('{"v":1,"adata":"","ks":256,"ct":"H0Pdwri+gLWwgF1cBMdajBImanalQyIaQ1s=","ts":96,"mode":"gcm","cipher":"aes","iter":100000,"iv":"OCUmEawhHy5PO2Y7","salt":"ME4rORPsQ1o="}', 'infinito')
+puts decrypt('{"v":1,"adata":"","ks":256,"ct":"35JT4zkDB3ovKz8O4gDC6YHwYzLHEwdp3qfGJ1/w0leaGxco6w3qPds/","ts":96,"mode":"gcm","cipher":"aes","iter":100000,"iv":"m/te3zXVEKvynfbN","salt":"NwDh7q3e0Xg="}', 'tvb')
 
 #puts download('tvb','infinito')
 

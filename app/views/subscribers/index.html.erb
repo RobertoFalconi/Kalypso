@@ -1,10 +1,10 @@
 <% provide(:title, "Get Updates") %>
 
 <% if cookies[:saved_subscriver] %>
-  <h1>Thanks for signing up!<h1>
+  <h1>Thanks for subscribing to the mailing list!<h1>
 
 <% else %>
-  <h1>Sign up to receive new post in your inbox!</h1>
+  <h1>Subscribe to receive new post in your inbox!</h1>
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <%= form_for @subscriber do |f| %>
