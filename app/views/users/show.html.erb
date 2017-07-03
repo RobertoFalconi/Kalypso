@@ -1,3 +1,5 @@
+
+
 <% provide(:title, @user.name) %>
 <div class="row">
 	<div class="col-md-6 col-md-offset-3">
@@ -10,6 +12,8 @@
 		
 		<%= f.label :'time-out' %>
 		<%= f.date_select :datepicker, class: 'form-control' %>
+		
+		
 		
 		<%= f.submit "Encrypt message", class: "btn btn-primary" %></br></br>
 		<%= f.submit "Decrypt message", class: "btn btn-primary" %>
