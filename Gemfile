@@ -8,6 +8,7 @@ end
 # Cryptography algorithm
 
 gem 'gibberish'
+gem 'bootstrap-datepicker-rails'
 
 # Bundle for Contact Us form
 gem 'mail_form'

@@ -230,3 +230,15 @@ border-color: #d6e9c6;
 color: #468847;
 text-align: left;
 }
+
+/* Users listing */
+.user {
+  list-style:  none;
+  mardin:  0;
+  li {
+    overflow:  auto;
+    padding:  10èx 0;
+    border-bottom:  1px solid $gray-lighter;
+  }
+
+}
