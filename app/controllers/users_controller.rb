@@ -15,13 +15,13 @@ class UsersController < ApplicationController
   def ban
     @user = User.find(params[:id])
     @user.update_attributes(banned: true)
-	flash[:success] = "User banned"
+	flash[:success] = "Profile updated"
 	redirect_to users_path
   end
 
   def unban
     User.find(params[:id]).update_attributes(banned: 'f')
-    flash[:success] = "User unbanned"
+    flash[:success] = "Profile updated"
 	redirect_to users_path
   end
 
@@ -62,7 +62,7 @@ class UsersController < ApplicationController
   def update
     if @user.update_attributes(user_params)
       flash[:success] = "Profile updated"
-      if current_user.admin?
+      if current_user.admin? #&& current_user != @user
 	    params[:user][:banned] == '1' ? ban : unban
 	  else redirect_to @user
 	  end

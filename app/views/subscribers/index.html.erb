@@ -4,20 +4,31 @@
   <h1>Thanks for subscribing to the mailing list!<h1>
 
 <% else %>
-  <h1>Subscribe to receive new post in your inbox!</h1>
+  
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <%= form_for @subscriber do |f| %>
         <%= render 'shared/subscribes_error_messages' %>
-      
+      <% if current_user.nil? || !current_user.admin? %>
+		<h1>Subscribe to receive new post in your inbox!</h1>
 	<%= f.label :name %>
 	<%= f.text_field :name, class: 'form-control' %>
 
 	<%= f.label :email %>	
 	<%= f.email_field :email, class: 'form-control' %>
 
-	<%= f.submit "Send", class: "btn btn-primary" %>
-      <% end %>
+	<%= f.submit "Subscribe!", class: "btn btn-primary" %>
+      
+		<%else%>
+		<h1>Send a newsletter</h1>
+		
+		<center>
+		<%= mail_to Subscriber.pluck(:email).to_s.gsub!('"','').gsub!('[','').gsub!(']','').gsub!(' ',', '), "Send a letter from Ogygia!", class: "btn btn-primary" %>
+		</center>
+		
+		<% end %>
+		<% end %>
+		
     </div>
   </div>
 <% end %>

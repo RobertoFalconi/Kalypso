@@ -4,19 +4,6 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for @contact do |f| %>
-      <%= render 'shared/contacts_error_messages' %>
-
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
-
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
-
-      <%= f.label :message %>
-      <%= f.text_area :message, class: 'form-control' %>
-
-      <%= f.submit "Send message", class: "btn btn-primary" %>
-    <% end %>
+   		<center><a href="mailto:admin@kalypso.com?Subject=Hi%20developers" target="_top" class="btn btn-primary">Send a letter to Ogygia!</a></center>
   </div>
 </div>
