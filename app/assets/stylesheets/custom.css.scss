@@ -206,6 +206,16 @@ input {
 
 .hidden { display: none; }
 
+.checkbox {
+  margin-top: 0px;
+  margin-bottom: 20px;
+	margin-left: 20px;
+  span {
+    margin-left: 10px;
+    font-weight: normal;
+  }
+}
+
 /*flash*/
 
 .alert-error {

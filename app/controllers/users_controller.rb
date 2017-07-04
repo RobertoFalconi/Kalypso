@@ -1,21 +1,28 @@
 class UsersController < ApplicationController
 
   before_action :logged_in_user, only: [ :edit, :update, :show, :destroy]
-  before_action :admin_user, only: [ :index, :ban, :unban]
+  before_action :admin_user, only: [ :index]
   before_action :correct_user, only: [ :edit, :update, :show]
 
   def show
-    @user = User.find(params[:id])
+	if current_user.admin? && current_user!= @user
+		redirect_to edit_user_path
+	else
+      @user = User.find(params[:id])
+	end
   end
 
   def ban
-    User.find(params[:id]).update_attributes(banned: 't')
-    flash[:success] = "User banned"
+    @user = User.find(params[:id])
+    @user.update_attributes(banned: true)
+	flash[:success] = "User banned"
+	redirect_to users_path
   end
 
   def unban
     User.find(params[:id]).update_attributes(banned: 'f')
     flash[:success] = "User unbanned"
+	redirect_to users_path
   end
 
   def new
@@ -55,7 +62,11 @@ class UsersController < ApplicationController
   def update
     if @user.update_attributes(user_params)
       flash[:success] = "Profile updated"
-      redirect_to @user
+      if current_user.admin?
+	    params[:user][:banned] == '1' ? ban : unban
+	  else redirect_to @user
+	  end
+	  #redirect_to @users
     else
       render 'edit'
     end
@@ -75,14 +86,13 @@ class UsersController < ApplicationController
 
   def correct_user
     @user = User.find(params[:id])
-    redirect_to(root_url) unless current_user?(@user)
+    redirect_to(root_url) unless current_user?(@user) || current_user.admin?
   end
 
   private
 
     def user_params
-      params.require(:user).permit( :name, :email, :password, 
-                                    :password_confirmation)
+      params.require(:user).permit( :name, :email, :password, :password_confirmation, :banned)
     end
 
     def admin_user

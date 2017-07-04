@@ -1,9 +1,10 @@
 <li>
-  <%= link_to user.name, user %>
+ 
+  <%= link_to user.name, user %> (id: 
+  <%= link_to user.id, user %>)
   <% if  current_user.admin? && !current_user?(user) %>
     | <%= link_to "delete", user, method: :delete, data: { confirm: "You sure?" } %>
-     <% if user.banned? %>|banned
-     <% else %> |<%= link_to " ban user", user, method: :ban, data: {confirm: "You sure?"} %>
+     <% if user.banned? %>| banned
      <% end %>
 
   <% end %>

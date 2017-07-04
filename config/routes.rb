@@ -25,8 +25,14 @@ Rails.application.routes.draw do
   get    'signup'  => 'users#new'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
-
   delete 'logout'  => 'sessions#destroy'
+  get    'ban'     => 'users#ban'
+  put    'users'   => 'users#ban'
+  #get   'users'   => 'users#ban'
   resources :users
 
 end
+
+
+#get ban e put users per autoban
+#get users per bannare altri utenti ma ricevere errore fatale

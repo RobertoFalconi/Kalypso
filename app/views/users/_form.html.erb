@@ -13,6 +13,13 @@
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation, class: 'form-control' %>
 
+  <% if current_user.admin? && current_user!=@user%>
+     <%= f.label :banned, class: "checkbox inline" do %>
+     <%= f.check_box :banned %>
+     <span>Ban user</span>
+     <% end %>
+  <% end %>
+  <br>
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 
 <% end %>
