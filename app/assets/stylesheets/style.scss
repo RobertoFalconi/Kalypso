@@ -87,6 +87,7 @@ Main components
 
 .cd-faq-categories {
 	margin-top: 55px;
+	
 	a {
 		position: relative;
 		display: block;
@@ -116,10 +117,6 @@ Main components
 		&::after {
 			@include transform(rotate(90deg));
 		}
-	}
-
-	li:last-child a {
-		border-bottom: none;
 	}
 
 	@include MQ(M) {
