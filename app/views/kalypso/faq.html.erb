@@ -1,10 +1,12 @@
 <% provide(:title,"F.A.Q.") %>
 <!DOCTYPE html>
+<!--
 <html>
   <head>
   </head>
   <body>
     <h1>F.A.Q.</h1>
+	  
 	  <h2>Why Kalypso?</h2>
 	  <center>Kalypso was a nymph in Greek mythology, who lived on the island of Ogygia, where she detained Odysseus for several years.</center>
 	  <center>The etymology of Kalypso's name is from καλύπτω (kalyptō), meaning "to hide".</center>
@@ -18,7 +20,121 @@
 	  <a href="mailto:admin@kalypso.com?Subject=Password%20reset" target="_top">Contact Us</a> 
 	  with your account e-mail asking for a password reset.</center>
 	  <h2>Does she respect my privacy?</h2>
-	  <center>Kalypso encrypts your messages without saving them on her servers. She does not even store the encrypted results!</center> -->
+	  <center>Kalypso encrypts your messages without saving them on her servers. She does not even store the encrypted results!</center>
 	  
   </body>
+
+</html>
+-->
+
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+<body>
+<header>
+	<h1>F.A.Q.</h1>
+</header>
+<section class="cd-faq">
+	<ul class="cd-faq-categories">
+		<li><a class="selected" href="#basics">Basics</a></li>
+		<li><a href="#mobile">Mobile</a></li>
+		<li><a href="#account">Account</a></li>
+		<li><a href="#privacy">Privacy</a></li>
+	</ul> <!-- cd-faq-categories -->
+
+	<div class="cd-faq-items">
+		<ul id="basics" class="cd-faq-group">
+			<li class="cd-faq-title"><h2>Basics</h2></li>
+			<li>
+				<a class="cd-faq-trigger" href="#0">I forgot my password. How do I reset it?</a>
+				<div class="cd-faq-content">
+					<p>Due to Kalypso's characteristics, user's security is an our focus. </br>To maximize system security, you have to 
+	  <a href="mailto:admin@kalypso.com?Subject=Password%20reset" target="_top">Contact Us</a> 
+	  with your account e-mail asking for a password reset.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+
+			<li>
+				<a class="cd-faq-trigger" href="#0">How do I sign up in Kalypso?</a>
+				<div class="cd-faq-content">
+					<p>It is necessary to Sign Up with username, e-mail and password. Kalypso does not store your password and does not use e-mail or username for anything.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+		</ul> <!-- cd-faq-group -->
+
+		<ul id="mobile" class="cd-faq-group">
+			<li class="cd-faq-title"><h2>Mobile</h2></li>
+			<li>
+				<a class="cd-faq-trigger" href="#0">How does transfer work?</a>
+				<div class="cd-faq-content">
+					<p>We uses QR Code to transfer your CRYPTED message on your phone without passing on some server, it is a point-to-point connection.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+
+			<li>
+				<a class="cd-faq-trigger" href="#0">How do I upload text files from my phone or tablet?</a>
+				<div class="cd-faq-content">
+					<p>You just need to click the download or upload button and write the correct encryption key.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+		</ul> <!-- cd-faq-group -->
+
+		<ul id="account" class="cd-faq-group">
+			<li class="cd-faq-title"><h2>Account</h2></li>
+			<li>
+				<a class="cd-faq-trigger" href="#0">How do I change my account settings (name, e-mail or password)?</a>
+				<div class="cd-faq-content">
+					<p>You can go to Settings -> Update your profile.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+
+			<li>
+				<a class="cd-faq-trigger" href="#0">How do I delete my account?</a>
+				<div class="cd-faq-content">
+					<p>We let you to easily delete your own account. Just go to Settings -> Update your profile.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+
+		</ul> <!-- cd-faq-group -->
+
+		<ul id="privacy" class="cd-faq-group">
+			<li class="cd-faq-title"><h2>Privacy</h2></li>
+			<li>
+				<a class="cd-faq-trigger" href="#0">Can I specify my own private encryption key?</a>
+				<div class="cd-faq-content">
+					<p>Yes, if you're a registered user you can chooce your key by typing it.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+
+			<li>
+				<a class="cd-faq-trigger" href="#0">I forgot my encryption key! Can I get it back?</a>
+				<div class="cd-faq-content">
+					<p>No, and if you don't remember it your messages encrypted with those key are lost forever, Kalypso can't do anything because she doesn't store anything except your username and your email.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+
+			<li>
+				<a class="cd-faq-trigger" href="#0">Can I access my account data?</a>
+				<div class="cd-faq-content">
+					<p>Kalypso encrypts your messages without saving them on her servers. She does not even store the encrypted results!</br>So, your data are your username and your e-mail. Anything else: no password, no caches, no messages, no encryption keys.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+		</ul> <!-- cd-faq-group -->
+
+	</div> <!-- cd-faq-items -->
+	<a href="#0" class="cd-close-panel">Close</a>
+</section> <!-- cd-faq -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
 </html>
