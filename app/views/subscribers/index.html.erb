@@ -23,7 +23,11 @@
 		<h1>Send a newsletter</h1>
 		
 		<center>
-		<%= mail_to Subscriber.pluck(:email).to_s.gsub!('"','').gsub!('[','').gsub!(']','').gsub!(' ',', '), "Send a letter from Ogygia!", class: "btn btn-primary" %>
+            <% if !Subscriber.pluck(:email).nil? %>
+		      <%= mail_to Subscriber.pluck(:email).to_s.gsub!('"','').gsub!('[','').gsub!(']','').gsub!(' ',', '), "Send a letter from Ogygia!", class: "btn btn-primary" %>
+            <% else %>
+              no subscribers :(
+            <% end %>
 		</center>
 		
 		<% end %>

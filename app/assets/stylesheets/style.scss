@@ -6,14 +6,20 @@
 
 @import '../partials/layout'; // responsive grid and media queries
 
+ul {
+    overflow: hidden;
+}
 
+li {
+    overflow: hidden;
+}
 .cd-faq {
 	width: 90%;
 	max-width: $L; // breakpoints inside partials > _layout.scss
 	margin: 2em auto;
 	box-shadow: 0 1px 5px rgba(#000, .1);
 	@include clearfix;
-
+    overflow: hidden;
 	@include MQ(M) {
 		position: relative;
 		margin: 4em auto;
@@ -22,6 +28,7 @@
 }
 
 .cd-faq-categories {
+    overflow: hidden;
 	a {
 		//margin-top: 100px;
 		position: relative;
@@ -29,14 +36,17 @@
 		overflow: hidden;
 		height: 50px;
 		line-height: 50px;
-		padding: 0 28px 0 16px;
-		background-color: $color-1;
+		padding: 0px 40px 0 16px;
+		background-color: darkgray;
 		@include font-smoothing;
-		color: $color-5;
+		color: white;
 		white-space: nowrap;
 		border-bottom: 1px solid lighten($color-1, 3%);
 		text-overflow: ellipsis;
-
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+	    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+	    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        
 		&::before, &::after {
 			/* plus icon on the right */
 			position: absolute;
@@ -54,13 +64,14 @@
 	}
 
 	li:last-child a {
+        overflow: hidden;
 		border-bottom: none;
 	}
 
 	@include MQ(M) {
 		width: 20%;
 		float: left;
-		box-shadow: 0 1px 2px rgba(#000, .08);
+		//box-shadow: 0px 2px 4px rgba(#000, .1);
 
 		a {
 			overflow: hidden;
@@ -74,9 +85,9 @@
 				display: none;
 			}
 
-			.no-touch &:hover {
-				background: lighten($color-1, 3%);
-			}
+			//.no-touch &:hover {
+				//background: lighten($color-1, 3%);
+			//}
 		}
 
 		.no-js & {
@@ -134,9 +145,9 @@
 	background: $color-5;
 	padding: 0 5% 1em;
 	overflow: auto;
-	-webkit-overflow-scrolling: touch;
+	//-webkit-overflow-scrolling: touch;
 	z-index: 1;
-	-webkit-backface-visibility: hidden;
+	//-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	@include transform(translateZ(0) translateX(100%));
 	-webkit-transition: -webkit-transform .3s;
@@ -184,7 +195,6 @@
 	display: block;
 	height: 40px;
 	width: 40px;
-	overflow: hidden;
 	text-indent: 100%;
 	white-space: nowrap;
 	z-index: 2;
@@ -235,9 +245,9 @@
 		box-shadow: none;
 		margin: 1em 0;
 
-		.no-touch &:hover {
-			box-shadow: none;
-		}
+		//.no-touch &:hover {
+		//	box-shadow: none;
+		//}
 
 		h2 {
 			overflow: hidden;
@@ -259,12 +269,15 @@
 		> li {
 			background: $color-5;
 			margin-bottom: 6px;	
-			box-shadow: 0 1px 2px rgba(#000, .08);
+			//box-shadow: 0 1px 2px rgba(#000, .08);
 			@include transition(box-shadow .2s);
-
-			.no-touch &:hover {
-				box-shadow: 0 1px 10px rgba($color-4, .3);
-			}
+            overflow: hidden;
+			//.no-touch &:hover {
+				//box-shadow: 0 1px 10px rgba($color-4, .3);
+			//}
+              	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 		}
 
 		.cd-faq-title {
@@ -283,13 +296,13 @@
 	display: block;
 	margin: 1.6em 0 .4em;
 	line-height: 1.2;
-
+    
 	@include MQ(M) {
 		@include font-size(24px);
 		font-weight: 300;
 		margin: 0;
-		padding: 24px 72px 24px 24px;
-
+		padding: 6px 72px 24px 24px;
+        color: black;
 		&::before, &::after {
 			/* arrow icon on the right */
 			position: absolute;
@@ -298,7 +311,7 @@
 			height: 2px;
 			width: 13px;
 			background: lighten($color-2, 20%);
-			-webkit-backface-visibility: hidden;
+			//-webkit-backface-visibility: hidden;
 			backface-visibility: hidden;
 			@include transition-property(transform);
 			@include transition-duration(.2s);
