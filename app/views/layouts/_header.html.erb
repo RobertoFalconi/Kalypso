@@ -1,5 +1,8 @@
 <head>
   <header class="navbar navbar-fixed-top navbar-inverse">
+<body>
+
+
     <div class="container">
       <% if logged_in? %>
         <%= link_to "kalypso", '#', id: "logo" %>
@@ -15,6 +18,7 @@
           <% if current_user.admin? %>
                     <li><%= link_to "Users", users_path %></li>
           <% end %>
+		  
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               Settings <b class="caret"></b>
@@ -30,6 +34,8 @@
               </li>
             </ul>
           </li>
+		  
+		  
         <% else %>
 		  <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Log in", login_path %></li>

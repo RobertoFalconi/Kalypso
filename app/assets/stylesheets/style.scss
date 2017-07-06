@@ -12,6 +12,8 @@ Primary style
 
 -------------------------------- */
 
+
+
 *, *::after, *::before {
 	@include box-sizing(border-box);
 }
@@ -20,20 +22,11 @@ Primary style
 	content: '';
 }
 
-ul {
-    overflow: hidden;
-}
-
-li {
-    overflow: hidden;
-}
-
 body {
 	color: $color-1;
 	background-color: $color-3;
 	
 	&::after {
-		/* overlay layer visible on small devices when the right panel slides in */
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -60,8 +53,8 @@ body {
 			display: none;
 		}
 	}
-
 }
+
 
 /* -------------------------------- 
 
@@ -88,6 +81,15 @@ Main components
 .cd-faq-categories {
 	margin-top: 55px;
 	
+	
+	ul {
+		overflow: hidden;
+	}
+
+	li {
+		overflow: hidden;
+	}
+	
 	a {
 		position: relative;
 		display: block;
@@ -103,7 +105,6 @@ Main components
 		text-overflow: ellipsis;
 
 		&::before, &::after {
-			/* plus icon on the right */
 			overflow: hidden;
 			position: absolute;
 			top: 50%;
@@ -158,7 +159,6 @@ Main components
 		z-index: 2;
 
 		a::before {
-			/* decorative rectangle on the left visible for the selected item */
 			overflow: hidden;
 			display: block;
 			top: 0;
@@ -180,7 +180,6 @@ Main components
 		}
 
 		&.is-fixed {
-			/* top and left value assigned in jQuery */
 			position: fixed;
 		}
 
@@ -255,14 +254,12 @@ Main components
 	text-indent: 100%;
 	white-space: nowrap;
 	z-index: 2;
-	/* Force Hardware Acceleration in WebKit */
 	@include transform(translateZ(0));
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	@include transition(right .4s);
 
 	&::before, &::after {
-		/* close icon in CSS */
 		position: absolute;
 		top: 16px;
 		left: 12px;
@@ -291,7 +288,6 @@ Main components
 
 .cd-faq-group {
 	overflow: hidden;
-	/* hide group not selected */
 	display: none;
 
 	&.selected {
@@ -321,7 +317,6 @@ Main components
 
 	@include MQ(M) {
 		overflow: hidden;
-		/* all groups visible */
 		display: block;
 
 		> li {
@@ -359,7 +354,6 @@ Main components
 		padding: 24px 72px 24px 24px;
 
 		&::before, &::after {
-			/* arrow icon on the right */
 			position: absolute;
 			right: 24px;
 			top: 50%;
