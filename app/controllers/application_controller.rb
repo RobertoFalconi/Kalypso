@@ -1,8 +1,9 @@
 class ApplicationController < ActionController::Base
 
   before_action :banned?
-
-  protect_from_forgery with: :exception
+  before_action :suspended?
+  
+ protect_from_forgery with: :exception
   include SessionsHelper
 
   def banned?
@@ -13,7 +14,11 @@ class ApplicationController < ActionController::Base
     end
   end
   
-    
+  def suspended?
+    if Site.find(1).suspended? && (current_user.nil? || (current_user.present? && !current_user.admin?))
+      redirect_to suspended_path unless request.fullpath == '/suspended'
+    end
+  end  
     
     
     

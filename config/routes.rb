@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :sites
   resources :subscribers
   get    'subscribers'=>'subscribers/index'
 #	root 'subscribers#index'
