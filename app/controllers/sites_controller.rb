@@ -1,32 +1,38 @@
 class SitesController < ApplicationController
-  before_action :set_site, only: [:show, :edit, :update, :destroy]
+  #before_action :set_site, only: [:show, :edit, :update, :destroy]
 
   # GET /sites
   # GET /sites.json
   
-#  def index
-#    @sites = Site.all
-#  end
+def index
+	#@sites = Site.all
+	redirect_to root_path
+end
 
   # GET /sites/1
   # GET /sites/1.json
   def show
+	  redirect_to root_path
   end
 
   # GET /sites/new
-#  def new
-#    @site = Site.new
-#  end
+  def new
+    @site = Site.new
+  end
 
   # GET /sites/1/edit
-#  def edit
-#  end
+def edit
+	redirect_to root_path
+end
 
   # POST /sites
   # POST /sites.json
-#  def create
-#    @site = Site.new(site_params)
-
+def create
+#@site = Site.new(site_path)
+	if Site.nil?
+		@site = Site.new(suspended: false)
+	else @site = Site.find(1)
+	end
 #    respond_to do |format|
 #      if @site.save
 #        format.html { redirect_to @site, notice: 'Site was successfully created.' }
@@ -36,7 +42,7 @@ class SitesController < ApplicationController
 #        format.json { render json: @site.errors, status: :unprocessable_entity }
 #      end
 #    end
-#  end
+end
 
   # PATCH/PUT /sites/1
   # PATCH/PUT /sites/1.json
@@ -52,31 +58,25 @@ class SitesController < ApplicationController
 #    end
 #  end
 
-  def suspended
+	
+def suspend
     if current_user.admin? 
-      redirect_to suspended_path unless request.fullpath == '/suspended'
-    elsif Site.find(1).suspended? && !current_user.admin?
-      redirect_to suspended_path unless request.fullpath == '/suspended'
-    else redirect_to root_path
-    end
-  end
-
-  def suspend
-    #if current_user.admin? 
       Site.find(1).update_attributes(suspended: true)
-      redirect_to user_path
-    #end
+	  flash[:success] = "Kalypso updated"
+      redirect_to root_path
+    end
   end
     
   def unsuspend
-    #if current_user.admin? 
+    if current_user.admin? 
       Site.find(1).update_attributes(suspended: false)
-      redirect_to user_path
-    #end
+	  flash[:success] = "Kalypso updated"
+      redirect_to root_path
+    end
   end
     
   def update
-    params[:site][:suspend] == '1' ? suspend : unsuspend
+    params[:site][:suspended] == '1' ? suspend : unsuspend
   end
 
     

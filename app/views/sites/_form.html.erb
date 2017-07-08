@@ -1,11 +1,27 @@
-<%= simple_form_for(@site) do |f| %>
-  <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :suspended %>
-  </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+<%= form_for Site.find(1) do |f| %>
+  <%= render 'shared/error_messages', object: @user %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control' %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email, class: 'form-control' %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, class: 'form-control' %>
+
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+   <% if current_user.admin? && current_user!=@user%>
+     <%= f.label :banned, class: "checkbox inline" do %>
+     <%= f.check_box :banned %>
+     <span>Ban user</span>
+     <% end %>
+  <% end %>
+  <br>
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+
 <% end %>

@@ -11,12 +11,15 @@ class KalypsoController < ApplicationController
   end
     
   def specialoptions
+	  if current_user.nil? || (current_user.present? && !current_user.admin?)
+		  redirect_to root_path
+	  end
   end
 
   def suspended
-    if current_user.admin? 
+    if !current_user.nil? && current_user.admin? 
       redirect_to suspended_path unless request.fullpath == '/suspended'
-    elsif Site.find(1).suspended? && !current_user.admin?
+    elsif Site.find(1).suspended? && (current_user.nil? || !current_user.admin?)
       redirect_to suspended_path unless request.fullpath == '/suspended'
     else redirect_to root_path
     end

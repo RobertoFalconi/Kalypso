@@ -34,7 +34,9 @@ Rails.application.routes.draw do
   put    'users'            => 'users#ban'
     
   get    'suspend'          => 'sites#suspend'
-  put    'sites'            => 'sites#suspend'
+  put    'sites'          => 'sites#suspend'
+	
+  
   
   #get   'users'   => 'users#ban'
   resources :users
