@@ -21,16 +21,21 @@ Rails.application.routes.draw do
 
   root                'kalypso#home'
 
-  get    'about'   => 'kalypso#about' 
-  get    'faq'     => 'kalypso#faq'
-  get	 'suspended' => 'kalypso#suspended'
-  get	 'specialoptions' => 'kalypso#specialoptions'
-  get    'signup'  => 'users#new'
-  get    'login'   => 'sessions#new'
-  post   'login'   => 'sessions#create'
-  delete 'logout'  => 'sessions#destroy'
-  get    'ban'     => 'users#ban'
-  put    'users'   => 'users#ban'
+  get    'about'            => 'kalypso#about' 
+  get    'faq'              => 'kalypso#faq'
+  get	 'suspended'        => 'kalypso#suspended'
+  get	 'specialoptions'   => 'kalypso#specialoptions'
+  get    'signup'           => 'users#new'
+  get    'login'            => 'sessions#new'
+  post   'login'            => 'sessions#create'
+  delete 'logout'           => 'sessions#destroy'
+    
+  get    'ban'              => 'users#ban'
+  put    'users'            => 'users#ban'
+    
+  get    'suspend'          => 'sites#suspend'
+  put    'sites'            => 'sites#suspend'
+  
   #get   'users'   => 'users#ban'
   resources :users
 
