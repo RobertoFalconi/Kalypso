@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
 
   before_action :banned?
   before_action :suspended?
+  before_action :check?
   
  protect_from_forgery with: :exception
   include SessionsHelper
@@ -20,7 +21,11 @@ class ApplicationController < ActionController::Base
     end
   end  
     
-    
+  def check?
+	if request.fullpath == '/restore' && !current_user.nil? && !current_user.admin?
+		redirect_to root_path
+	end
+  end
     
     
     

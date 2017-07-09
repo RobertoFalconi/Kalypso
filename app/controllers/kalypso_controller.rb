@@ -9,6 +9,7 @@ class KalypsoController < ApplicationController
 
   def faq
   end
+	
     
   def specialoptions
 	  if current_user.nil? || (current_user.present? && !current_user.admin?)

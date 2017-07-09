@@ -5,14 +5,23 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+  def encrypt(message, key)
+    cipher = Gibberish::AES.new(key)
+	result = cipher.encrypt(message)
+	return result
+  end
+
 Site.create!(id: "1", suspended: "false")
-User.create!(name:  "Example User",
-             email: "example@railstutorial.org",
-             password:              "foobar12",
-             password_confirmation: "foobar12",
+User.create!(name:  "Admin",
+             email: "admin@kalypso.com",
+             password:              "12345678",
+             password_confirmation: "12345678",
              admin: true,
 			 activated: true,
-             activated_at: Time.zone.now)
+             activated_at: Time.zone.now,
+	         question: 1,
+	         answer: encrypt('la cipolla','kalypso'))
 
 99.times do |n|
   name  = Faker::Name.name
@@ -22,6 +31,9 @@ User.create!(name:  "Example User",
                email: email,
                password:              password,
                password_confirmation: password,
-	  			activated: true,
-              activated_at: Time.zone.now)
+	  		   activated: true,
+               activated_at: Time.zone.now,
+	           question: 1,
+	           answer: encrypt('la cipolla','kalypso'))
+
 end

@@ -23,6 +23,11 @@ def encrypt(message, key, timeout)
 	return result
 end
 
+def encrypt2(message, key)
+	cipher = Gibberish::AES.new(key)
+	result = cipher.encrypt(message)
+	return result
+end
 
 def decrypt (message, key)
 	cipher = Gibberish::AES.new(key)
@@ -34,6 +39,12 @@ def decrypt (message, key)
 	if (now[0] == time[0] and now[1] > time[1]) then return 'Time-out expired' end
 	if (now[0] == time[0] and now[1] == time[1] and now[2] > time[2]) then return 'Time-out expired' end
 	return result.split('@')[0]
+end
+		
+def decrypt2 (message, key)
+	cipher = Gibberish::AES.new(key)
+	result = cipher.decrypt(message)
+	return result
 end
 
 def download (message, key)
@@ -51,9 +62,13 @@ end
 
 ## TEST ##
 
-#puts encrypt('ciao bò come stai?', 'tvb', '2017/07/02')
+#puts encrypt('zieta', 'kalypso', '2018/07/02')
 
-puts decrypt('{"v":1,"adata":"","ks":256,"ct":"35JT4zkDB3ovKz8O4gDC6YHwYzLHEwdp3qfGJ1/w0leaGxco6w3qPds/","ts":96,"mode":"gcm","cipher":"aes","iter":100000,"iv":"m/te3zXVEKvynfbN","salt":"NwDh7q3e0Xg="}', 'tvb')
+#encrypt2('gino', 'kalypso')
+
+#puts decrypt('{"v":1,"adata":"","ks":256,"ct":"g0K/RCK1Y3SPlMbrd0liklwfjVjSOQMwkfyjFg==","ts":96,"mode":"gcm","cipher":"aes","iter":100000,"iv":"N3REKym/jr7ThLOu","salt":"VHiob842c4k="}', 'kalypso')
+		
+#puts decrypt2('{"v":1,"adata":"","ks":256,"ct":"yxPDvy0WBGNmmnvomxOoOw==","ts":96,"mode":"gcm","cipher":"aes","iter":100000,"iv":"nzP5Dy1V+NUEL7kV","salt":"ddmetFWomkA="}', 'kalypso')
 
 #puts download('tvb','infinito')
 

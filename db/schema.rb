@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170706142302) do
+ActiveRecord::Schema.define(version: 20170708212006) do
 
   create_table "sites", force: :cascade do |t|
     t.boolean "suspended"
@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 20170706142302) do
     t.string "activation_digest"
     t.boolean "activated", default: false
     t.datetime "activated_at"
+    t.integer "question"
+    t.string "answer"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

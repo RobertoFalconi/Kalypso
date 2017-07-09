@@ -3,7 +3,7 @@
 <h1>Sign up</h1>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
+  <%= form_for(@user) do |f| %>
   <%= render 'shared/error_messages', object: @user %>
 
   <%= f.label :name %>
@@ -15,8 +15,14 @@
   <%= f.label :password %>
   <%= f.password_field :password, class: 'form-control' %>
 
-  <%= f.label :password_confirmation %>
+  <%= f.label :password_confirmation, "Confirmation" %>
   <%= f.password_field :password_confirmation, class: 'form-control' %>
+  
+  <%= f.label :question %>
+  <%= f.select :question, options_for_select([['Domanda_1',1],['Domanda_2',2],['Domanda_3',3],['Domanda_4',4]]) %>
+	  
+  <%= f.label :answer %>
+  <%= f.text_field :answer, class: 'form-control' %>	  
 
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 

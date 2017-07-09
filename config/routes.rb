@@ -26,10 +26,15 @@ Rails.application.routes.draw do
   get	 'suspended'        => 'kalypso#suspended'
   get	 'specialoptions'   => 'kalypso#specialoptions'
   get    'signup'           => 'users#new'
+	
   get    'login'            => 'sessions#new'
   post   'login'            => 'sessions#create'
+	
   delete 'logout'           => 'sessions#destroy'
-    
+
+  get 'restore'				=> 'sessions#restore'
+  post 'restore'				=> 'sessions#restored'
+	
   get    'ban'              => 'users#ban'
   put    'users'            => 'users#ban'
     

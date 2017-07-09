@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   before_action :admin_user, only: [ :index]
   before_action :correct_user, only: [ :edit, :update, :show]
 
+	
   def show
 	if current_user.admin? && current_user!= @user
 		redirect_to edit_user_path
@@ -49,6 +50,9 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+	q = params[:user][:question]
+	@user.update_attributes(question: q)
+	@user.update_attributes(answer: encrypt(params[:user][:answer], 'kalypso'))
     if @user.save
       log_in @user
       flash[:success] = "Welcome to Kalypso!"
@@ -92,11 +96,17 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit( :name, :email, :password, :password_confirmation, :banned)
+      params.require(:user).permit( :name, :email, :password, :password_confirmation, :banned, :question, :answer)
     end
 
     def admin_user
       redirect_to(current_user) unless current_user.nil? || current_user.admin?
     end
+	
+	def encrypt(message, key)
+		cipher = Gibberish::AES.new(key)
+		result = cipher.encrypt(message)
+		return result
+	end
 
 end

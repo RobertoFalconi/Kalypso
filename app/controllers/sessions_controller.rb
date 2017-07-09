@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
 
+	
   def new
     return redirect_to(current_user) if current_user.present?
   end
@@ -7,7 +8,6 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
-      #log the user in and redirect to the user's show page
       log_in user
       remember user
       redirect_back_or user # -> user_url(user)
@@ -16,6 +16,20 @@ class SessionsController < ApplicationController
        render 'new'
     end
   end
+	
+  
+def restored
+	user = User.find_by(email: params[:session][:email].downcase)
+	if user && (params[:session][:answer] == decrypt(user.answer,'kalypso'))
+	  log_in user
+	  remember user
+	  redirect_to edit_user_path(user)
+	  flash[:danger] = "Immediatly change your password!"
+	else
+	   flash.now[:danger] = 'Invalid email/question/answer combination'
+       render 'new'
+    end
+end
 
   def destroy
     log_out
@@ -33,5 +47,11 @@ class SessionsController < ApplicationController
       super
     end
    end
+	
+  def decrypt (message, key)
+      cipher = Gibberish::AES.new(key)
+      result = cipher.decrypt(message)
+      return result
+    end
 	
 end

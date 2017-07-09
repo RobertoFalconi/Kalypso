@@ -13,14 +13,14 @@
       <ul class="nav navbar-nav navbar-right">
         
         <% if logged_in? %>
-		  <li><%= link_to "Home" , current_user, id: "porcodio" %></li>
+		  <li><%= link_to "Home" , current_user, id: "menusopra" %></li>
 
           <% if current_user.admin? %>
-                    <li><%= link_to "Users", users_path, id: "porcodio" %></li>
+                    <li><%= link_to "Users", users_path, id: "menusopra" %></li>
           <% end %>
 		  
           <li class="dropdown" >
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" id = "porcodio">Settings<b class="caret"></b>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" id = "menusopra">Settings<b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
               <li><%= link_to "Update your profile", edit_user_path(current_user) %></li>
@@ -36,9 +36,9 @@
 		  
 		  
         <% else %>
-		  <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Log in", login_path %></li>
-          <li><%= link_to "Sign up", signup_path %></li>
+		  <li><%= link_to "Home", root_path, id: "menusopra" %></li>
+          <li><%= link_to "Log in", login_path, id: "menusopra" %></li>
+          <li><%= link_to "Sign up", signup_path, id: "menusopra" %></li>
         <% end %>
       </ul>
     </nav>
