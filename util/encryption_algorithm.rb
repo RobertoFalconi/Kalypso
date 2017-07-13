@@ -35,9 +35,9 @@ def decrypt (message, key)
 	time = result.split('@')[1]
 	time = time.split('/')
 	now = get_time()
-	if (now[0] > time[0]) then return 'Time-out expired' end
-	if (now[0] == time[0] and now[1] > time[1]) then return 'Time-out expired' end
-	if (now[0] == time[0] and now[1] == time[1] and now[2] > time[2]) then return 'Time-out expired' end
+	if (now[0] > time[2]) then return 'Time-out expired' end
+	if (now[0] <= time[2] and now[1] > time[0]) then return 'Time-out expired' end
+	if (now[0] <= time[2] and now[1] <= time[0] and now[2] > time[1]) then return 'Time-out expired' end
 	return result.split('@')[0]
 end
 		
@@ -66,9 +66,11 @@ end
 
 #encrypt2('gino', 'kalypso')
 
-#puts decrypt('{"v":1,"adata":"","ks":256,"ct":"g0K/RCK1Y3SPlMbrd0liklwfjVjSOQMwkfyjFg==","ts":96,"mode":"gcm","cipher":"aes","iter":100000,"iv":"N3REKym/jr7ThLOu","salt":"VHiob842c4k="}', 'kalypso')
+#puts decrypt('{"v":1,"adata":"","ks":256,"ct":"C/4qTA9vGfl+dLmcpw==","ts":96,"mode":"gcm","cipher":"aes","iter":100000,"iv":"Qo3xdjxdpMOL64g0","salt":"0pOXoAL9k00="}', '')
 		
-#puts decrypt2('{"v":1,"adata":"","ks":256,"ct":"yxPDvy0WBGNmmnvomxOoOw==","ts":96,"mode":"gcm","cipher":"aes","iter":100000,"iv":"nzP5Dy1V+NUEL7kV","salt":"ddmetFWomkA="}', 'kalypso')
+print get_time()
+		
+puts decrypt2('{"v":1,"adata":"","ks":256,"ct":"C/4qTA9vGfl+dLmcpw==","ts":96,"mode":"gcm","cipher":"aes","iter":100000,"iv":"Qo3xdjxdpMOL64g0","salt":"0pOXoAL9k00="}', '')
 
 #puts download('tvb','infinito')
 
