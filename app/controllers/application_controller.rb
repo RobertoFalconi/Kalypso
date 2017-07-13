@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :banned?
   before_action :suspended?
   before_action :check?
+  before_action :check1?
   
  protect_from_forgery with: :exception
   include SessionsHelper
@@ -26,7 +27,12 @@ class ApplicationController < ActionController::Base
 		redirect_to root_path
 	end
   end
-    
+	
+  def check1?
+      if !current_user.nil? && request.fullpath == '/users/'+current_user.id.to_s && !current_user.admin?
+		redirect_to messages_path
+	  end
+  end
     
     
     

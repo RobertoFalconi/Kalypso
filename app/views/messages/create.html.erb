@@ -7,5 +7,15 @@
 	  	<center>
 			<small>Non verrà tenuta traccia del messaggio sui server di Kalypso</small>
 	    </center>
+	  <br>
+	  <center>
+		  <h4>Inquadra il QR Code per inviare il messaggio a chi vuoi!</h4>
+	  <a href="https://api.qrserver.com/v1/create-qr-code/?data=<%=@message.messaggio %>&amp;size=300x300" download>
+		  <img border="0" src="https://api.qrserver.com/v1/create-qr-code/?data=<%=@message.messaggio %>&amp;size=200x200">
+	  </a>
+	<br><br>
+		  <a href="https://api.qrserver.com/v1/create-qr-code/?data=<%=@message.messaggio %>&amp;size=300x300" class = "btn btn-primary" download>Download QR Code!</a><br><br>
+	  <%= link_to "Encrypt or decrypt another message!", messages_path, class:"btn btn-lg btn-primary" %></center>
+	  
   </div>
 </div>

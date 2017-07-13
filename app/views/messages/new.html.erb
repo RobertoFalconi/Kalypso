@@ -1,22 +1,58 @@
 <% provide(:title, "Encrypt or Decrypt a message!") %>
-<h1>Encrypt or decrypt a message, <%= current_user.name %>!</h1>
 
+<script>
+    $(document).ready(function() {
+      var review_text = $("#review_text");
+      var counter     = $("#counter");
+      var max_length  = counter.data("maximum-length");
+
+      review_text.keyup(function() {
+          counter.text(max_length - $(this).val().length);
+      });
+
+    });
+</script>
+
+<script type="text/javascript" lang="javascript">
+            function validaForm(){
+                var a = 
+            }
+        </script>
+
+<h1>Encrypt or decrypt a message, <% if current_user.nil? %> visitor! <% else %><%= current_user.name %><% end %></h1>
+<% if current_user.nil? %><h4><center>Sign up to choose your own encryption key</center></h4><% end %>
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
-	  
-   		<%= form_for :message do |f| %>
-		<%= f.label :key %>
-		<%= f.text_field :key, class: 'form-control', :placeholder => "Insert an increption key (you will have to remember it)" %>
-		<%= f.label :messaggio %>
-		<%= f.text_area :messaggio, class: 'form-control', :placeholder => "Inser a message to be encrypted" %>
-		<%= f.label :'timeout' %>
-		<%= f.text_field :'timeout', 'data-behaviour' => 'datepicker', :placeholder => "Choose the date until that the message can be decrypted" %>
-		<script type="text/javascript">
-		  $('[data-behaviour~=datepicker]').datepicker();
-		</script>
+	<div class="col-md-6 col-md-offset-3">
+	  	<%= form_for :message do |f| %>
+			<%= f.label :key %>
+	  		<% if current_user.nil? %>
+				<%= f.select :key, options_for_select([['Odysseus',1],['Homer',2],['Atlas',3],['Pleione',4]]) %>
+	  		<% else %>
+				<%= f.text_field :key, class: 'form-control', :placeholder => "We suggest you something that is known only from you and from your receiver" %>
+	  		<% end %>
 		
-		<%= f.submit "Encrypt message", class: "btn btn-primary" %></br></br>
-		<%= f.submit "Decrypt message", class: "btn btn-primary" %>
+	  		<%= f.label :messaggio %>
+			<% if current_user.nil? %>
+				<%= f.text_area :messaggio, id: 'review_text', class: 'form-control', :placeholder => "Insert a message to be encrypted" %>Chars left: <span id="counter" data-maximum-length="<%= 15 %>"><%= 15 %></span><br><br>
+	  		<% else %>
+				<%= f.text_area :messaggio, class: 'form-control', :placeholder => "Insert a message to be encrypted" %>
+	  		<% end %>
+	  
+	  		<%= f.label :'timeout' %>
+				<%= f.text_field :'timeout', 'data-behaviour' => 'datepicker', :placeholder => "Pick the date until that the message can be decrypted" %>
+				<script type="text/javascript">
+		  			$('[data-behaviour~=datepicker]').datepicker();
+				</script>
+	  		<%= f.submit "Encrypt message", class: "btn btn-primary" %></br></br>
+			<%= f.submit "Decrypt message", class: "btn btn-primary" %></br></br>
 		<% end %>
+
+		<form enctype="multipart/form-data"  action="http://api.qrserver.com/v1/read-qr-code/" method="POST" onSubmit="return validaForm();">
+			<input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+				Choose QR code image to read/scan: </br>
+			<input name="file" type="file"/>
+			<input type="submit" value="Read QR code" class="btn btn-primary"/>
+        </form>
+
   </div>
 </div>
