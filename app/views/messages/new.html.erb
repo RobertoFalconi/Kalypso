@@ -1,0 +1,22 @@
+<% provide(:title, "Encrypt or Decrypt a message!") %>
+<h1>Encrypt or Decrypt a message, <%= current_user.name %>!</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+	  
+   		<%= form_for :message do |f| %>
+		<%= f.label :key %>
+		<%= f.text_field :key, class: 'form-control', :placeholder => "Insert an increption key (you will have to remember it)" %>
+		<%= f.label :messaggio %>
+		<%= f.text_area :messaggio, class: 'form-control', :placeholder => "Inser a message to be encrypted" %>
+		<%= f.label :'timeout' %>
+		<%= f.text_field :'timeout', 'data-behaviour' => 'datepicker', :placeholder => "Choose the date until that the message can be decrypted" %>
+		<script type="text/javascript">
+		  $('[data-behaviour~=datepicker]').datepicker();
+		</script>
+		
+		<%= f.submit "Encrypt message", class: "btn btn-primary" %></br></br>
+		<%= f.submit "Decrypt message", class: "btn btn-primary" %>
+		<% end %>
+  </div>
+</div>

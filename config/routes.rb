@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :sites
+	resources :users
   resources :subscribers
   get    'subscribers'=>'subscribers/index'
 #	root 'subscribers#index'
@@ -33,21 +34,13 @@ Rails.application.routes.draw do
   delete 'logout'           => 'sessions#destroy'
 
   get 'restore'				=> 'sessions#restore'
-  post 'restore'				=> 'sessions#restored'
+  post 'restore'			=> 'sessions#restored'
 	
   get    'ban'              => 'users#ban'
   put    'users'            => 'users#ban'
     
   get    'suspend'          => 'sites#suspend'
-  put    'sites'          => 'sites#suspend'
+  put    'sites'         	=> 'sites#suspend'
 	
-  
-  
-  #get   'users'   => 'users#ban'
-  resources :users
 
 end
-
-
-#get ban e put users per autoban
-#get users per bannare altri utenti ma ricevere errore fatale
