@@ -3,8 +3,58 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
    		<h1>Il tuo messaggio criptato è:</h1>
-	 	<center><textarea readonly rows="4" cols="40"><%= @message.messaggio %></textarea></center>
+
+            <textarea id="inputTextToSave" readonly rows="4" cols="40"><%= @message.messaggio %></textarea>
+        
+        Filename to Save As:
+        <input id="inputFileNameToSaveAs"></input>
+        <center><button onclick="saveTextAsFile()" class = "btn btn-primary">Save Text to File</button></center>
+
+ 
+<script type="text/javascript">
+ 
+function saveTextAsFile()
+{
+    var textToSave = document.getElementById("inputTextToSave").value;
+    var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+    var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+    var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value+".txt";
+ 
+    var downloadLink = document.createElement("a");
+    downloadLink.download = fileNameToSaveAs;
+    downloadLink.innerHTML = "Download File";
+    downloadLink.href = textToSaveAsURL;
+    downloadLink.onclick = destroyClickedElement;
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+ 
+    downloadLink.click();
+}
+ 
+function destroyClickedElement(event)
+{
+    document.body.removeChild(event.target);
+}
+ 
+function loadFileAsText()
+{
+    var fileToLoad = document.getElementById("fileToLoad").files[0];
+ 
+    var fileReader = new FileReader();
+    fileReader.onload = function(fileLoadedEvent) 
+    {
+        var textFromFileLoaded = fileLoadedEvent.target.result;
+        document.getElementById("inputTextToSave").value = textFromFileLoaded;
+    };
+    fileReader.readAsText(fileToLoad, "UTF-8");
+}
+ 
+</script>
+ 
+
+	  
 	  	<center>
+			<br>
 			<small>Non verrà tenuta traccia del messaggio sui server di Kalypso</small>
 	    </center>
 	  <br>

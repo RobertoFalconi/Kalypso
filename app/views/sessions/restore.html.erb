@@ -11,7 +11,7 @@
     <%= f.email_field :email, class: 'form-control' %>
 
     <%= f.label :question, "Question"%>
-    <%= f.select :question, options_for_select([['Domanda_1',1],['Domanda_2',2],['Domanda_3',3],['Domanda_4',4]]) %>
+    <%= f.select :question, options_for_select([['La tua band preferita?',1],['Il lavoro di tuo nonno?',2],['Il nome del tuo primo animale domestico?',3],['Il tuo film preferito?',4]]) %>
 	  
     <%= f.label :answer %>
     <%= f.text_field :answer, class: 'form-control' %>	  
