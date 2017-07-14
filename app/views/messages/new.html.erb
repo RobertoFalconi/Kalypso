@@ -47,12 +47,12 @@
 
         Select a File to Load:
         <input type="file" id="fileToLoad">
-        <button onclick="loadFileAsText()" class = "btn btn-primary">Load Selected File</button><br>
+        <button onclick="loadFileAsText()" class = "btn btn-primary">Load Selected File</button><br><br>
 
 
-		<form enctype="multipart/form-data"  action="http://api.qrserver.com/v1/read-qr-code/" method="POST" onSubmit="return validaForm();">
-			<input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
-				Choose QR code image to read/scan: </br>
+		<form enctype="multipart/form-data"  action="http://api.qrserver.com/v1/read-qr-code/" method="POST">
+			<input type="hidden" name="MAX_FILE_SIZE" value="1048576"/>
+				Choose QR code image to read/scan:</br>
 			<input name="file" type="file"/>
 			<input type="submit" value="Read QR code" class="btn btn-primary"/>
         </form>
