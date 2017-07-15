@@ -1,101 +1,96 @@
-<% provide(:title, "Encrypt or Decrypt a message!") %>
-
-<script>
-    $(document).ready(function() {
-      var inputTextToSave = $("#inputTextToSave");
-      var counter     = $("#counter");
-      var max_length  = counter.data("maximum-length");
-
-      inputTextToSave.keyup(function() {
-          counter.text(max_length - $(this).val().length);
-      });
-
-    });
-</script>
-
-<h1>Encrypt or decrypt a message, <% if current_user.nil? %> visitor! <% else %><%= current_user.name %><% end %></h1>
-<% if current_user.nil? %><h4><center><%= link_to "Sign up", signup_path %> or <%= link_to "Log in", login_path %> to choose your own encryption key</center></h4><% end %>
-<div class="row">
-	<div class="col-md-6 col-md-offset-3">
-	  	<%= form_for :message do |f| %>
-			<%= f.label :key %>
-	  		<% if current_user.nil? %>
-				<%= f.select :key, options_for_select([['Odysseus',1],['Homer',2],['Atlas',3],['Pleione',4]]) %>
-	  		<% else %>
-				<%= f.text_field :key, class: 'form-control', :placeholder => "We suggest you something that is known only from you and from your receiver" %>
-	  		<% end %>
+<html>
 		
-		
-		
-	  		<%= f.label :messaggio, "Message" %>
-			<% if current_user.nil? %>
-				<%= f.text_area :messaggio, id: "inputTextToSave", class: 'form-control', :placeholder => "Insert a message to be encrypted" %>Chars left: <span id="counter" data-maximum-length="<%= 15 %>"><%= 15 %></span><br><br>
-	  		<% else %>
-				<%= f.text_area :messaggio, id: "inputTextToSave", class: 'form-control', :placeholder => "Insert a message to be encrypted" %>
-	  		<% end %>
-		
-	  		<%= f.label :'timeout' %>
-				<%= f.text_field :'timeout', 'data-behaviour' => 'datepicker', :placeholder => "Pick the date until that the message can be decrypted" %>
-				<script type="text/javascript">
-		  			$('[data-behaviour~=datepicker]').datepicker();
-				</script>
-	  		<%= f.submit "Encrypt message", class: "btn btn-primary" %></br></br>
-			<%= f.submit "Decrypt message", class: "btn btn-primary" %></br></br>
-		<% end %>
+	<head>
+		<script type="text/javascript" lang="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    	</script>
+		<script>
+			$(document).ready(function() {
+			  var inputTextToSave = $("#inputTextToSave");
+			  var counter     = $("#counter");
+			  var max_length  = counter.data("maximum-length");
 
- 
+			  inputTextToSave.keyup(function() {
+				  counter.text(max_length - $(this).val().length);
+			  });
 
-        Select a File to Load:
-        <input type="file" id="fileToLoad">
-        <button onclick="loadFileAsText()" class = "btn btn-primary">Load Selected File</button><br><br>
+			});
+
+			function saveTextAsFile()
+			{
+				var textToSave = document.getElementById("inputTextToSave").value;
+				var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+				var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+				var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
+
+				var downloadLink = document.createElement("a");
+				downloadLink.download = fileNameToSaveAs;
+				downloadLink.innerHTML = "Download File";
+				downloadLink.href = textToSaveAsURL;
+				downloadLink.onclick = destroyClickedElement;
+				downloadLink.style.display = "none";
+				document.body.appendChild(downloadLink);
+
+				downloadLink.click();
+			}
+
+			function destroyClickedElement(event)
+			{
+				document.body.removeChild(event.target);
+			}
+
+			function loadFileAsText()
+			{
+				var fileToLoad = document.getElementById("fileToLoad").files[0];
+
+				var fileReader = new FileReader();
+				fileReader.onload = function(fileLoadedEvent) 
+				{
+					var textFromFileLoaded = fileLoadedEvent.target.result;
+					document.getElementById("inputTextToSave").value = textFromFileLoaded;
+				};
+				fileReader.readAsText(fileToLoad, "UTF-8");
+			}
+		</script>
+	</head>
+	<body>
+		<% provide(:title, "Encrypt or Decrypt a message!") %>
+
+		<h1>Encrypt or decrypt a message, <% if current_user.nil? %> visitor! <% else %><%= current_user.name %><% end %></h1>
+		<% if current_user.nil? %><h4><center><%= link_to "Sign up", signup_path %> or <%= link_to "Log in", login_path %> to choose your own encryption key</center></h4><% end %>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				
+				<%= form_for :message do |f| %>
+				
+					<%= f.label :key %>
+					<% if current_user.nil? %>
+						<%= f.select :key, options_for_select([['Odysseus',1],['Homer',2],['Atlas',3],['Pleione',4]]) %>
+					<% else %>
+						<%= f.text_field :key, class: 'form-control', :placeholder => "We suggest you something that is known only from you and from your receiver" %>
+					<% end %>
+				
+					<%= f.label :messaggio, "Message" %>
+					<% if current_user.nil? %>
+						<%= f.text_area :messaggio, id: "inputTextToSave", class: 'form-control', :placeholder => "Insert a message to be encrypted" %>Chars left: <span id="counter" data-maximum-length="<%= 15 %>"><%= 15 %></span><br><br>
+					<% else %>
+						<%= f.text_area :messaggio, id: "inputTextToSave", class: 'form-control', :placeholder => "Insert a message to be encrypted" %>
+					<% end %>
+
+					<%= f.label :'timeout' %>
+						<%= f.text_field :'timeout', 'data-behaviour' => 'datepicker', :placeholder => "Pick the date until that the message can be decrypted" %>
+						<script type="text/javascript">
+							$('[data-behaviour~=datepicker]').datepicker();
+						</script>
+					<%= f.submit "Encrypt message", class: "btn btn-primary" %></br></br>
+					<%= f.submit "Decrypt message", class: "btn btn-primary" %></br></br>
+				<% end %>
 
 
-		<form enctype="multipart/form-data"  action="http://api.qrserver.com/v1/read-qr-code/" method="POST">
-			<input type="hidden" name="MAX_FILE_SIZE" value="1048576"/>
-				Choose QR code image to read/scan:</br>
-			<input name="file" type="file"/>
-			<input type="submit" value="Read QR code" class="btn btn-primary"/>
-        </form>
 
-  </div>
-</div>
+				Select a File to Load:
+				<input type="file" id="fileToLoad">
+				<button onclick="loadFileAsText()" class = "btn btn-primary">Load Selected File</button><br><br>
+			</div>
+		</div>
 
-<script type="text/javascript">
- 
-function saveTextAsFile()
-{
-    var textToSave = document.getElementById("inputTextToSave").value;
-    var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
-    var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
-    var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
- 
-    var downloadLink = document.createElement("a");
-    downloadLink.download = fileNameToSaveAs;
-    downloadLink.innerHTML = "Download File";
-    downloadLink.href = textToSaveAsURL;
-    downloadLink.onclick = destroyClickedElement;
-    downloadLink.style.display = "none";
-    document.body.appendChild(downloadLink);
- 
-    downloadLink.click();
-}
- 
-function destroyClickedElement(event)
-{
-    document.body.removeChild(event.target);
-}
- 
-function loadFileAsText()
-{
-    var fileToLoad = document.getElementById("fileToLoad").files[0];
- 
-    var fileReader = new FileReader();
-    fileReader.onload = function(fileLoadedEvent) 
-    {
-        var textFromFileLoaded = fileLoadedEvent.target.result;
-        document.getElementById("inputTextToSave").value = textFromFileLoaded;
-    };
-    fileReader.readAsText(fileToLoad, "UTF-8");
-}
- 
-</script>
+</html>
