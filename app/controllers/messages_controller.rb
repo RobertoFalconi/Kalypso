@@ -62,16 +62,22 @@ class MessagesController < ApplicationController
 		end
 	end
 
-	def decrypt (message, key)
-		cipher = Gibberish::AES.new(key)
-		result = cipher.decrypt(message)
-		time = result.split('@')[1]
-		time = time.split('/')
-		now = get_time()
-		if (now[0] > time[2]) then return 'Time-out expired' end
-		if (now[0] <= time[2] and now[1] > time[0]) then return 'Time-out expired' end
-		if (now[0] <= time[2] and now[1] <= time[0] and now[2] > time[1]) then return 'Time-out expired' end
-		return result.split('@')[0]
+	def decrypt (message, key) 
+		begin
+			cipher = Gibberish::AES.new(key)
+			result = cipher.decrypt(message)
+			time = result.split('@')[1]
+			time = time.split('/')
+			now = get_time()
+			if (now[0] > time[2]) then return 'Time-out expired' end
+			if (now[0] <= time[2] and now[1] > time[0]) then return 'Time-out expired' end
+			if (now[0] <= time[2] and now[1] <= time[0] and now[2] > time[1]) then return 'Time-out expired' end
+			return result.split('@')[0]
+			
+			rescue
+				redirect_to messages_path
+				flash[:error]='invalid message or key'
+		end
 	end
 			
 	def download (message, key)
