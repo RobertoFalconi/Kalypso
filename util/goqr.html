@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script type="text/javascript" lang="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+        </script>
+        <script>
+            $(document).ready(function(){
+                $('#QRform').submit(function(event) {
+                    var formData = new FormData();
+                    formData.append("file", $('input[name="file"]')[0].files[0]);
+                    event.stopPropagation();
+                    event.preventDefault();
+                    $.ajax({
+                        url: $(this).attr("action"),
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        type: 'POST',
+                        success: function(data) {
+                            $("#showQR").append(JSON.stringify(data[0]['symbol'][0]['data']));
+                        },
+                        complete: function(response, textStatus) {
+                            return console.log(response);
+                        }
+                    });
+                    return false;
+                  });
+                });
+        </script>
+    </head>
+    <body>
+        <form id="QRform" enctype="multipart/form-data" action="http://api.qrserver.com/v1/read-qr-code/" method="POST">
+        <!-- MAX_FILE_SIZE (maximum file size in bytes) must precede the file input field used to upload the QR code image -->
+        <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+        <!-- The "name" of the input field has to be "file" as it is the name of the POST parameter -->
+        Choose QR code image to read/scan: <input name="file" type="file"/>
+        <input type="submit" value="Read QR code" />
+        </form>
+        <b>Here's the content of the QR code you chose:</b>
+        <div id="showQR"></div>
+    </body>
+</html>
