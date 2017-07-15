@@ -5,3 +5,4 @@ end
 Then(/^I should see the welcome message$/) do
   assert page.has_content?("Welcome to Kalypso")
 end
+
