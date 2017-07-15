@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-
+	skip_before_action :verify_authenticity_token
 	
   def new
     return redirect_to(current_user) if current_user.present?

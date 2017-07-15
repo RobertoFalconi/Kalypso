@@ -14,7 +14,36 @@
 			  });
 
 			});
+			
+			$(document).ready(function(){
+                $('#QRform').submit(function(event) {
+                    var formData = new FormData();
+                    formData.append("file", $('input[name="file"]')[0].files[0]);
+                    event.stopPropagation();
+                    event.preventDefault();
+                    $.ajax({
+                        url: $(this).attr("action"),
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        type: 'POST',
+                        success: function(data) {
+                            var json_str = JSON.stringify(data[0]['symbol'][0]['data']);
+                            var str = json_str.split('\\').join('');
+                            var ret = str.substr(1, str.length-2);
+                            $("#inputTextToSave").html(ret.split(' ').join('+'));
+                        },
+                        complete: function(response, textStatus) {
+                            return console.log(response);
+                        }
+                    });
+                    return false;
+                  });
+                });
 
+			$(document).ready(function(){
+				$('[data-behaviour~=datepicker]').datepicker()});
+	
 			function saveTextAsFile()
 			{
 				var textToSave = document.getElementById("inputTextToSave").value;
@@ -52,7 +81,11 @@
 			}
 		</script>
 	</head>
+	
+	
 	<body>
+		
+		
 		<% provide(:title, "Encrypt or Decrypt a message!") %>
 
 		<h1>Encrypt or decrypt a message, <% if current_user.nil? %> visitor! <% else %><%= current_user.name %><% end %></h1>
@@ -77,19 +110,26 @@
 					<% end %>
 
 					<%= f.label :'timeout' %>
-						<%= f.text_field :'timeout', 'data-behaviour' => 'datepicker', :placeholder => "Pick the date until that the message can be decrypted" %>
-						<script type="text/javascript">
-							$('[data-behaviour~=datepicker]').datepicker();
-						</script>
+						<%= f.text_field :'timeout', 'data-behaviour' => 'datepicker', :placeholder => "MM/DD/AAAA" %>
+						
 					<%= f.submit "Encrypt message", class: "btn btn-primary" %></br></br>
 					<%= f.submit "Decrypt message", class: "btn btn-primary" %></br></br>
 				<% end %>
 
 
 
-				Select a File to Load:
+				Select a .txt file to load:
 				<input type="file" id="fileToLoad">
 				<button onclick="loadFileAsText()" class = "btn btn-primary">Load Selected File</button><br><br>
+
+				<form id="QRform" enctype="multipart/form-data" action="http://api.qrserver.com/v1/read-qr-code/" method="POST">
+        		<!-- MAX_FILE_SIZE (maximum file size in bytes) must precede the file input field used to upload the QR code image -->
+        		<input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+        		<!-- The "name" of the input field has to be "file" as it is the name of the POST parameter -->
+        		Choose QR Code image to read: <input name="file" type="file"/>
+        		<input type="submit" class = "btn btn-primary" value="Read QR code"/>
+        		</form>
+
 			</div>
 		</div>
 
