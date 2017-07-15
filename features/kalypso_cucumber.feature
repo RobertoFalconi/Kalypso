@@ -1,4 +1,4 @@
-Feature: Hello Cucumber
+Feature: Kalypso Homepage
 As a product manager
 I want our users to be greeted when they visit our site
 So that they have a better experience

@@ -37670,3 +37670,293 @@ Processing by KalypsoController#home as HTML
   [1m[36mSite Load (0.3ms)[0m  [1m[34mSELECT  "sites".* FROM "sites" WHERE "sites"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
 Completed 404 Not Found in 63ms (ActiveRecord: 2.7ms)
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-07-15 17:38:19 +0200
+Processing by KalypsoController#home as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSite Load (0.5ms)[0m  [1m[34mSELECT  "sites".* FROM "sites" WHERE "sites"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 95ms (ActiveRecord: 4.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-07-15 17:45:27 +0200
+Processing by KalypsoController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSite Load (0.1ms)[0m  [1m[34mSELECT  "sites".* FROM "sites" WHERE "sites"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 26ms (ActiveRecord: 1.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-07-15 17:49:19 +0200
+Processing by KalypsoController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSite Load (0.2ms)[0m  [1m[34mSELECT  "sites".* FROM "sites" WHERE "sites"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 29ms (ActiveRecord: 1.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-07-15 17:54:28 +0200
+Processing by KalypsoController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSite Load (0.1ms)[0m  [1m[34mSELECT  "sites".* FROM "sites" ORDER BY "sites"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (14.5ms)
+WARNING: [Bourbon] [Deprecation] `box-sizing` is deprecated and will be removed in 5.0.0. We suggest using an automated prefixing tool, like Autoprefixer.
+         on line 10 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate'
+         from line 17 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate-for-prefixing'
+         from line 422 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-sizing'
+         from line 18 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss
+
+
+WARNING: [Bourbon] [Deprecation] `transform` is deprecated and will be removed in 5.0.0. We suggest using an automated prefixing tool, like Autoprefixer.
+         on line 10 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate'
+         from line 17 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate-for-prefixing'
+         from line 2 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/css3/_transform.scss, in `transform'
+         from line 119 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss
+
+
+WARNING: [Bourbon] [Deprecation] `transition` is deprecated and will be removed in 5.0.0. We suggest using an automated prefixing tool, like Autoprefixer.
+         on line 10 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate'
+         from line 17 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate-for-prefixing'
+         from line 7 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/css3/_transition.scss, in `transition'
+         from line 135 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss, in `@content'
+         from line 14 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/partials/_layout.scss, in `MQ'
+         from line 123 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss
+
+
+WARNING: [Bourbon] [Deprecation] `transition` is deprecated and will be removed in 5.0.0. We suggest using an automated prefixing tool, like Autoprefixer.
+         on line 10 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate'
+         from line 17 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate-for-prefixing'
+         from line 7 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/css3/_transition.scss, in `transition'
+         from line 171 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss, in `@content'
+         from line 17 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/partials/_layout.scss, in `MQ'
+         from line 153 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss
+
+
+WARNING: [Bourbon] [Deprecation] `transform` is deprecated and will be removed in 5.0.0. We suggest using an automated prefixing tool, like Autoprefixer.
+         on line 10 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate'
+         from line 17 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate-for-prefixing'
+         from line 2 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/css3/_transform.scss, in `transform'
+         from line 206 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss
+
+
+WARNING: [Bourbon] [Deprecation] `transform` is deprecated and will be removed in 5.0.0. We suggest using an automated prefixing tool, like Autoprefixer.
+         on line 10 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate'
+         from line 17 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate-for-prefixing'
+         from line 2 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/css3/_transform.scss, in `transform'
+         from line 212 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss
+
+
+WARNING: [Bourbon] [Deprecation] `transform` is deprecated and will be removed in 5.0.0. We suggest using an automated prefixing tool, like Autoprefixer.
+         on line 10 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate'
+         from line 17 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate-for-prefixing'
+         from line 2 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/css3/_transform.scss, in `transform'
+         from line 219 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss
+
+
+WARNING: [Bourbon] [Deprecation] `transform` is deprecated and will be removed in 5.0.0. We suggest using an automated prefixing tool, like Autoprefixer.
+         on line 10 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate'
+         from line 17 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate-for-prefixing'
+         from line 2 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/css3/_transform.scss, in `transform'
+         from line 229 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss, in `@content'
+         from line 14 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/partials/_layout.scss, in `MQ'
+         from line 222 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss
+
+
+WARNING: [Bourbon] [Deprecation] `transform` is deprecated and will be removed in 5.0.0. We suggest using an automated prefixing tool, like Autoprefixer.
+         on line 10 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate'
+         from line 17 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate-for-prefixing'
+         from line 2 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/css3/_transform.scss, in `transform'
+         from line 257 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss
+
+
+WARNING: [Bourbon] [Deprecation] `transition` is deprecated and will be removed in 5.0.0. We suggest using an automated prefixing tool, like Autoprefixer.
+         on line 10 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate'
+         from line 17 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate-for-prefixing'
+         from line 7 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/css3/_transition.scss, in `transition'
+         from line 260 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss
+
+
+WARNING: [Bourbon] [Deprecation] `transform` is deprecated and will be removed in 5.0.0. We suggest using an automated prefixing tool, like Autoprefixer.
+         on line 10 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate'
+         from line 17 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate-for-prefixing'
+         from line 2 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/css3/_transform.scss, in `transform'
+         from line 273 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss
+
+
+WARNING: [Bourbon] [Deprecation] `transform` is deprecated and will be removed in 5.0.0. We suggest using an automated prefixing tool, like Autoprefixer.
+         on line 10 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate'
+         from line 17 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate-for-prefixing'
+         from line 2 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/css3/_transform.scss, in `transform'
+         from line 277 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss
+
+
+WARNING: [Bourbon] [Deprecation] `transition` is deprecated and will be removed in 5.0.0. We suggest using an automated prefixing tool, like Autoprefixer.
+         on line 10 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate'
+         from line 17 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate-for-prefixing'
+         from line 7 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/css3/_transition.scss, in `transition'
+         from line 326 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss, in `@content'
+         from line 14 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/partials/_layout.scss, in `MQ'
+         from line 318 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss
+
+
+WARNING: [Bourbon] [Deprecation] `transition-property` is deprecated and will be removed in 5.0.0. We suggest using an automated prefixing tool, like Autoprefixer.
+         on line 10 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate'
+         from line 17 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate-for-prefixing'
+         from line 57 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/css3/_transition.scss, in `transition-property'
+         from line 365 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss, in `@content'
+         from line 14 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/partials/_layout.scss, in `MQ'
+         from line 350 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss
+
+
+WARNING: [Bourbon] [Deprecation] `transition-property-names` is deprecated and will be removed in 5.0.0.
+         on line 6 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/functions/_transition-property-name.scss, in `transition-property'
+         from line 365 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss, in `@content'
+         from line 14 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/partials/_layout.scss, in `MQ'
+         from line 350 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss
+
+
+WARNING: [Bourbon] [Deprecation] `transition-property-names` is deprecated and will be removed in 5.0.0.
+         on line 6 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/functions/_transition-property-name.scss, in `transition-property'
+         from line 365 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss, in `@content'
+         from line 14 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/partials/_layout.scss, in `MQ'
+         from line 350 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss
+
+
+WARNING: [Bourbon] [Deprecation] `transition-property-names` is deprecated and will be removed in 5.0.0.
+         on line 6 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/functions/_transition-property-name.scss, in `transition-property'
+         from line 365 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss, in `@content'
+         from line 14 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/partials/_layout.scss, in `MQ'
+         from line 350 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss
+
+
+WARNING: [Bourbon] [Deprecation] `transition-duration` is deprecated and will be removed in 5.0.0. We suggest using an automated prefixing tool, like Autoprefixer.
+         on line 10 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate'
+         from line 17 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate-for-prefixing'
+         from line 65 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/css3/_transition.scss, in `transition-duration'
+         from line 366 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss, in `@content'
+         from line 14 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/partials/_layout.scss, in `MQ'
+         from line 350 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss
+
+
+WARNING: [Bourbon] [Deprecation] `transform` is deprecated and will be removed in 5.0.0. We suggest using an automated prefixing tool, like Autoprefixer.
+         on line 10 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate'
+         from line 17 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate-for-prefixing'
+         from line 2 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/css3/_transform.scss, in `transform'
+         from line 370 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss, in `@content'
+         from line 14 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/partials/_layout.scss, in `MQ'
+         from line 350 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss
+
+
+WARNING: [Bourbon] [Deprecation] `transform` is deprecated and will be removed in 5.0.0. We suggest using an automated prefixing tool, like Autoprefixer.
+         on line 10 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate'
+         from line 17 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate-for-prefixing'
+         from line 2 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/css3/_transform.scss, in `transform'
+         from line 375 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss, in `@content'
+         from line 14 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/partials/_layout.scss, in `MQ'
+         from line 350 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss
+
+
+WARNING: [Bourbon] [Deprecation] `transform` is deprecated and will be removed in 5.0.0. We suggest using an automated prefixing tool, like Autoprefixer.
+         on line 10 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate'
+         from line 17 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate-for-prefixing'
+         from line 2 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/css3/_transform.scss, in `transform'
+         from line 379 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss, in `@content'
+         from line 14 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/partials/_layout.scss, in `MQ'
+         from line 350 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss
+
+
+WARNING: [Bourbon] [Deprecation] `transform` is deprecated and will be removed in 5.0.0. We suggest using an automated prefixing tool, like Autoprefixer.
+         on line 10 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate'
+         from line 17 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/_bourbon-deprecate.scss, in `_bourbon-deprecate-for-prefixing'
+         from line 2 of /var/lib/gems/2.2.0/gems/bourbon-4.3.4/app/assets/stylesheets/css3/_transform.scss, in `transform'
+         from line 383 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss, in `@content'
+         from line 14 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/partials/_layout.scss, in `MQ'
+         from line 350 of /mnt/c/Users/Licitra/Desktop/laboratorio/Kalypso/app/assets/stylesheets/style.scss
+
+
+  Rendered layouts/_shim.html.erb (0.9ms) [cache miss]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.3ms) [cache miss]
+  Rendered layouts/_footer.html.erb (1.2ms) [cache miss]
+Completed 200 OK in 25817ms (Views: 25743.6ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-07-15 17:56:43 +0200
+Processing by KalypsoController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSite Load (0.1ms)[0m  [1m[34mSELECT  "sites".* FROM "sites" ORDER BY "sites"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_shim.html.erb (0.3ms) [cache miss]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.2ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.5ms) [cache miss]
+Completed 200 OK in 527ms (Views: 495.1ms | ActiveRecord: 1.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-07-15 17:59:49 +0200
+Processing by KalypsoController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSite Load (0.1ms)[0m  [1m[34mSELECT  "sites".* FROM "sites" ORDER BY "sites"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms) [cache miss]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.2ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.5ms) [cache miss]
+Completed 200 OK in 535ms (Views: 492.6ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-07-15 18:08:51 +0200
+Processing by KalypsoController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSite Load (0.1ms)[0m  [1m[34mSELECT  "sites".* FROM "sites" ORDER BY "sites"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering kalypso/home.html.erb within layouts/application
+  Rendered kalypso/home.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms) [cache miss]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.4ms) [cache miss]
+  Rendered layouts/_footer.html.erb (0.6ms) [cache miss]
+Completed 200 OK in 565ms (Views: 530.9ms | ActiveRecord: 1.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m

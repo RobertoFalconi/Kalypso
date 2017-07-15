@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   end
   
   def suspended?
-    if (Site.find(1).suspended? && (current_user.nil? || (current_user.present? && !current_user.admin?))) && request.env['PATH_INFO'] != login_path
+    if (Site.first.suspended? && (current_user.nil? || (current_user.present? && !current_user.admin?))) && request.env['PATH_INFO'] != login_path
       redirect_to suspended_path unless request.fullpath == '/suspended'
     end
   end  
