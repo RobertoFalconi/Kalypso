@@ -4,6 +4,779 @@
 		<script type="text/javascript" lang="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     	</script>
 		<script>
+			
+!function( $ ) {
+	
+	// Picker object
+	
+	var Datepicker = function(element, options){
+		this.element = $(element);
+		this.format = DPGlobal.parseFormat(options.format||this.element.data('date-format')||'mm/dd/yyyy');
+		this.picker = $(DPGlobal.template)
+							.appendTo('body')
+							.on({
+								click: $.proxy(this.click, this)//,
+								//mousedown: $.proxy(this.mousedown, this)
+							});
+		this.isInput = this.element.is('input');
+		this.component = this.element.is('.date') ? this.element.find('.add-on') : false;
+		
+		if (this.isInput) {
+			this.element.on({
+				focus: $.proxy(this.show, this),
+				//blur: $.proxy(this.hide, this),
+				keyup: $.proxy(this.update, this)
+			});
+		} else {
+			if (this.component){
+				this.component.on('click', $.proxy(this.show, this));
+			} else {
+				this.element.on('click', $.proxy(this.show, this));
+			}
+		}
+	
+		this.minViewMode = options.minViewMode||this.element.data('date-minviewmode')||0;
+		if (typeof this.minViewMode === 'string') {
+			switch (this.minViewMode) {
+				case 'months':
+					this.minViewMode = 1;
+					break;
+				case 'years':
+					this.minViewMode = 2;
+					break;
+				default:
+					this.minViewMode = 0;
+					break;
+			}
+		}
+		this.viewMode = options.viewMode||this.element.data('date-viewmode')||0;
+		if (typeof this.viewMode === 'string') {
+			switch (this.viewMode) {
+				case 'months':
+					this.viewMode = 1;
+					break;
+				case 'years':
+					this.viewMode = 2;
+					break;
+				default:
+					this.viewMode = 0;
+					break;
+			}
+		}
+		this.startViewMode = this.viewMode;
+		this.weekStart = options.weekStart||this.element.data('date-weekstart')||0;
+		this.weekEnd = this.weekStart === 0 ? 6 : this.weekStart - 1;
+		this.onRender = options.onRender;
+		this.fillDow();
+		this.fillMonths();
+		this.update();
+		this.showMode();
+	};
+	
+	Datepicker.prototype = {
+		constructor: Datepicker,
+		
+		show: function(e) {
+			this.picker.show();
+			this.height = this.component ? this.component.outerHeight() : this.element.outerHeight();
+			this.place();
+			$(window).on('resize', $.proxy(this.place, this));
+			if (e ) {
+				e.stopPropagation();
+				e.preventDefault();
+			}
+			if (!this.isInput) {
+			}
+			var that = this;
+			$(document).on('mousedown', function(ev){
+				if ($(ev.target).closest('.datepicker').length == 0) {
+					that.hide();
+				}
+			});
+			this.element.trigger({
+				type: 'show',
+				date: this.date
+			});
+		},
+		
+		hide: function(){
+			this.picker.hide();
+			$(window).off('resize', this.place);
+			this.viewMode = this.startViewMode;
+			this.showMode();
+			if (!this.isInput) {
+				$(document).off('mousedown', this.hide);
+			}
+			//this.set();
+			this.element.trigger({
+				type: 'hide',
+				date: this.date
+			});
+		},
+		
+		set: function() {
+			var formated = DPGlobal.formatDate(this.date, this.format);
+			if (!this.isInput) {
+				if (this.component){
+					this.element.find('input').prop('value', formated);
+				}
+				this.element.data('date', formated);
+			} else {
+				this.element.prop('value', formated);
+			}
+		},
+		
+		setValue: function(newDate) {
+			if (typeof newDate === 'string') {
+				this.date = DPGlobal.parseDate(newDate, this.format);
+			} else {
+				this.date = new Date(newDate);
+			}
+			this.set();
+			this.viewDate = new Date(this.date.getFullYear(), this.date.getMonth(), 1, 0, 0, 0, 0);
+			this.fill();
+		},
+		
+		place: function(){
+			var offset = this.component ? this.component.offset() : this.element.offset();
+			this.picker.css({
+				top: offset.top + this.height,
+				left: offset.left
+			});
+		},
+		
+		update: function(newDate){
+			this.date = DPGlobal.parseDate(
+				typeof newDate === 'string' ? newDate : (this.isInput ? this.element.prop('value') : this.element.data('date')),
+				this.format
+			);
+			this.viewDate = new Date(this.date.getFullYear(), this.date.getMonth(), 1, 0, 0, 0, 0);
+			this.fill();
+		},
+		
+		fillDow: function(){
+			var dowCnt = this.weekStart;
+			var html = '<tr>';
+			while (dowCnt < this.weekStart + 7) {
+				html += '<th class="dow">'+DPGlobal.dates.daysMin[(dowCnt++)%7]+'</th>';
+			}
+			html += '</tr>';
+			this.picker.find('.datepicker-days thead').append(html);
+		},
+		
+		fillMonths: function(){
+			var html = '';
+			var i = 0
+			while (i < 12) {
+				html += '<span class="month">'+DPGlobal.dates.monthsShort[i++]+'</span>';
+			}
+			this.picker.find('.datepicker-months td').append(html);
+		},
+		
+		fill: function() {
+			var d = new Date(this.viewDate),
+				year = d.getFullYear(),
+				month = d.getMonth(),
+				currentDate = this.date.valueOf();
+			this.picker.find('.datepicker-days th:eq(1)')
+						.text(DPGlobal.dates.months[month]+' '+year);
+			var prevMonth = new Date(year, month-1, 28,0,0,0,0),
+				day = DPGlobal.getDaysInMonth(prevMonth.getFullYear(), prevMonth.getMonth());
+			prevMonth.setDate(day);
+			prevMonth.setDate(day - (prevMonth.getDay() - this.weekStart + 7)%7);
+			var nextMonth = new Date(prevMonth);
+			nextMonth.setDate(nextMonth.getDate() + 42);
+			nextMonth = nextMonth.valueOf();
+			var html = [];
+			var clsName,
+				prevY,
+				prevM;
+			while(prevMonth.valueOf() < nextMonth) {
+				if (prevMonth.getDay() === this.weekStart) {
+					html.push('<tr>');
+				}
+				clsName = this.onRender(prevMonth);
+				prevY = prevMonth.getFullYear();
+				prevM = prevMonth.getMonth();
+				if ((prevM < month &&  prevY === year) ||  prevY < year) {
+					clsName += ' old';
+				} else if ((prevM > month && prevY === year) || prevY > year) {
+					clsName += ' new';
+				}
+				if (prevMonth.valueOf() === currentDate) {
+					clsName += ' active';
+				}
+				html.push('<td class="day '+clsName+'">'+prevMonth.getDate() + '</td>');
+				if (prevMonth.getDay() === this.weekEnd) {
+					html.push('</tr>');
+				}
+				prevMonth.setDate(prevMonth.getDate()+1);
+			}
+			this.picker.find('.datepicker-days tbody').empty().append(html.join(''));
+			var currentYear = this.date.getFullYear();
+			
+			var months = this.picker.find('.datepicker-months')
+						.find('th:eq(1)')
+							.text(year)
+							.end()
+						.find('span').removeClass('active');
+			if (currentYear === year) {
+				months.eq(this.date.getMonth()).addClass('active');
+			}
+			
+			html = '';
+			year = parseInt(year/10, 10) * 10;
+			var yearCont = this.picker.find('.datepicker-years')
+								.find('th:eq(1)')
+									.text(year + '-' + (year + 9))
+									.end()
+								.find('td');
+			year -= 1;
+			for (var i = -1; i < 11; i++) {
+				html += '<span class="year'+(i === -1 || i === 10 ? ' old' : '')+(currentYear === year ? ' active' : '')+'">'+year+'</span>';
+				year += 1;
+			}
+			yearCont.html(html);
+		},
+		
+		click: function(e) {
+			e.stopPropagation();
+			e.preventDefault();
+			var target = $(e.target).closest('span, td, th');
+			if (target.length === 1) {
+				switch(target[0].nodeName.toLowerCase()) {
+					case 'th':
+						switch(target[0].className) {
+							case 'switch':
+								this.showMode(1);
+								break;
+							case 'prev':
+							case 'next':
+								this.viewDate['set'+DPGlobal.modes[this.viewMode].navFnc].call(
+									this.viewDate,
+									this.viewDate['get'+DPGlobal.modes[this.viewMode].navFnc].call(this.viewDate) + 
+									DPGlobal.modes[this.viewMode].navStep * (target[0].className === 'prev' ? -1 : 1)
+								);
+								this.fill();
+								this.set();
+								break;
+						}
+						break;
+					case 'span':
+						if (target.is('.month')) {
+							var month = target.parent().find('span').index(target);
+							this.viewDate.setMonth(month);
+						} else {
+							var year = parseInt(target.text(), 10)||0;
+							this.viewDate.setFullYear(year);
+						}
+						if (this.viewMode !== 0) {
+							this.date = new Date(this.viewDate);
+							this.element.trigger({
+								type: 'changeDate',
+								date: this.date,
+								viewMode: DPGlobal.modes[this.viewMode].clsName
+							});
+						}
+						this.showMode(-1);
+						this.fill();
+						this.set();
+						break;
+					case 'td':
+						if (target.is('.day') && !target.is('.disabled')){
+							var day = parseInt(target.text(), 10)||1;
+							var month = this.viewDate.getMonth();
+							if (target.is('.old')) {
+								month -= 1;
+							} else if (target.is('.new')) {
+								month += 1;
+							}
+							var year = this.viewDate.getFullYear();
+							this.date = new Date(year, month, day,0,0,0,0);
+							this.viewDate = new Date(year, month, Math.min(28, day),0,0,0,0);
+							this.fill();
+							this.set();
+							this.element.trigger({
+								type: 'changeDate',
+								date: this.date,
+								viewMode: DPGlobal.modes[this.viewMode].clsName
+							});
+						}
+						break;
+				}
+			}
+		},
+		
+		mousedown: function(e){
+			e.stopPropagation();
+			e.preventDefault();
+		},
+		
+		showMode: function(dir) {
+			if (dir) {
+				this.viewMode = Math.max(this.minViewMode, Math.min(2, this.viewMode + dir));
+			}
+			this.picker.find('>div').hide().filter('.datepicker-'+DPGlobal.modes[this.viewMode].clsName).show();
+		}
+	};
+	
+	$.fn.datepicker = function ( option, val ) {
+		return this.each(function () {
+			var $this = $(this),
+				data = $this.data('datepicker'),
+				options = typeof option === 'object' && option;
+			if (!data) {
+				$this.data('datepicker', (data = new Datepicker(this, $.extend({}, $.fn.datepicker.defaults,options))));
+			}
+			if (typeof option === 'string') data[option](val);
+		});
+	};
+
+	$.fn.datepicker.defaults = {
+		onRender: function(date) {
+			return '';
+		}
+	};
+	$.fn.datepicker.Constructor = Datepicker;
+	
+	var DPGlobal = {
+		modes: [
+			{
+				clsName: 'days',
+				navFnc: 'Month',
+				navStep: 1
+			},
+			{
+				clsName: 'months',
+				navFnc: 'FullYear',
+				navStep: 1
+			},
+			{
+				clsName: 'years',
+				navFnc: 'FullYear',
+				navStep: 10
+		}],
+		dates:{
+			days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+			daysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+			daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+			months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+			monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+		},
+		isLeapYear: function (year) {
+			return (((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0))
+		},
+		getDaysInMonth: function (year, month) {
+			return [31, (DPGlobal.isLeapYear(year) ? 29 : 28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month]
+		},
+		parseFormat: function(format){
+			var separator = format.match(/[.\/\-\s].*?/),
+				parts = format.split(/\W+/);
+			if (!separator || !parts || parts.length === 0){
+				throw new Error("Invalid date format.");
+			}
+			return {separator: separator, parts: parts};
+		},
+		parseDate: function(date, format) {
+			var parts = date.split(format.separator),
+				date = new Date(),
+				val;
+			date.setHours(0);
+			date.setMinutes(0);
+			date.setSeconds(0);
+			date.setMilliseconds(0);
+			if (parts.length === format.parts.length) {
+				var year = date.getFullYear(), day = date.getDate(), month = date.getMonth();
+				for (var i=0, cnt = format.parts.length; i < cnt; i++) {
+					val = parseInt(parts[i], 10)||1;
+					switch(format.parts[i]) {
+						case 'dd':
+						case 'd':
+							day = val;
+							date.setDate(val);
+							break;
+						case 'mm':
+						case 'm':
+							month = val - 1;
+							date.setMonth(val - 1);
+							break;
+						case 'yy':
+							year = 2000 + val;
+							date.setFullYear(2000 + val);
+							break;
+						case 'yyyy':
+							year = val;
+							date.setFullYear(val);
+							break;
+					}
+				}
+				date = new Date(year, month, day, 0 ,0 ,0);
+			}
+			return date;
+		},
+		formatDate: function(date, format){
+			var val = {
+				d: date.getDate(),
+				m: date.getMonth() + 1,
+				yy: date.getFullYear().toString().substring(2),
+				yyyy: date.getFullYear()
+			};
+			val.dd = (val.d < 10 ? '0' : '') + val.d;
+			val.mm = (val.m < 10 ? '0' : '') + val.m;
+			var date = [];
+			for (var i=0, cnt = format.parts.length; i < cnt; i++) {
+				date.push(val[format.parts[i]]);
+			}
+			return date.join(format.separator);
+		},
+		headTemplate: '<thead>'+
+							'<tr>'+
+								'<th class="prev">&lsaquo;</th>'+
+								'<th colspan="5" class="switch"></th>'+
+								'<th class="next">&rsaquo;</th>'+
+							'</tr>'+
+						'</thead>',
+		contTemplate: '<tbody><tr><td colspan="7"></td></tr></tbody>'
+	};
+	DPGlobal.template = '<div class="datepicker dropdown-menu">'+
+							'<div class="datepicker-days">'+
+								'<table class=" table-condensed">'+
+									DPGlobal.headTemplate+
+									'<tbody></tbody>'+
+								'</table>'+
+							'</div>'+
+							'<div class="datepicker-months">'+
+								'<table class="table-condensed">'+
+									DPGlobal.headTemplate+
+									DPGlobal.contTemplate+
+								'</table>'+
+							'</div>'+
+							'<div class="datepicker-years">'+
+								'<table class="table-condensed">'+
+									DPGlobal.headTemplate+
+									DPGlobal.contTemplate+
+								'</table>'+
+							'</div>'+
+						'</div>';
+
+}( window.jQuery );
+			
+					if (window.location.href.indexOf('reload')==-1) {
+     window.location.replace(window.location.href+'?reload');
+}
+			
+			jQuery(document).ready(function () {
+            var options = {
+                onLoad: function () {
+                    $('#messages').text('Start typing password');
+                },
+                onKeyUp: function (evt) {
+                    $(evt.target).pwstrength("outputErrorList");
+                }
+            };
+            $(':password').pwstrength(options);
+        });
+
+
+(function ($) {
+    "use strict";
+
+    var options = {
+            errors: [],
+            // Options
+            minChar: 8,
+            scores: [17, 26, 40, 50],
+            verdicts: ["Weak", "Normal", "Medium", "Strong", "Very Strong"],
+            showVerdicts: true,
+            raisePower: 1.4,
+            usernameField: "#username",
+            onLoad: undefined,
+            onKeyUp: undefined,
+            viewports: {
+                verdict: undefined,
+                errors: undefined
+            },
+            // Rules stuff
+            ruleScores: {
+                wordNotEmail: -100,
+                wordLength: -100,
+                wordSimilarToUsername: -100,
+                wordLowercase: 1,
+                wordUppercase: 3,
+                wordOneNumber: 3,
+                wordThreeNumbers: 5,
+                wordOneSpecialChar: 3,
+                wordTwoSpecialChar: 5,
+                wordUpperLowerCombo: 2,
+                wordLetterNumberCombo: 2,
+                wordLetterNumberCharCombo: 2
+            },
+            rules: {
+                wordNotEmail: true,
+                wordLength: true,
+                wordSimilarToUsername: true,
+                wordLowercase: true,
+                wordUppercase: true,
+                wordOneNumber: true,
+                wordThreeNumbers: true,
+                wordOneSpecialChar: true,
+                wordTwoSpecialChar: true,
+                wordUpperLowerCombo: true,
+                wordLetterNumberCombo: true,
+                wordLetterNumberCharCombo: true
+            },
+            validationRules: {
+                wordNotEmail: function (options, word, score) {
+                    return word.match(/^([\w\!\#$\%\&\'\*\+\-\/\=\?\^\`{\|\}\~]+\.)*[\w\!\#$\%\&\'\*\+\-\/\=\?\^\`{\|\}\~]+@((((([a-z0-9]{1}[a-z0-9\-]{0,62}[a-z0-9]{1})|[a-z])\.)+[a-z]{2,6})|(\d{1,3}\.){3}\d{1,3}(\:\d{1,5})?)$/i) && score;
+                },
+                wordLength: function (options, word, score) {
+                    var wordlen = word.length,
+                        lenScore = Math.pow(wordlen, options.raisePower);
+                    if (wordlen < options.minChar) {
+                        lenScore = (lenScore + score);
+                        options.errors.push(options.errorMessages.password_to_short);
+                    }
+                    return lenScore;
+                },
+                wordSimilarToUsername: function (options, word, score) {
+                    var username = $(options.usernameField).val();
+                    if (username && word.toLowerCase().match(username.toLowerCase())) {
+                        options.errors.push(options.errorMessages.same_as_username);
+                        return score;
+                    }
+                    return true;
+                },
+                wordLowercase: function (options, word, score) {
+                    return word.match(/[a-z]/) && score;
+                },
+                wordUppercase: function (options, word, score) {
+                    return word.match(/[A-Z]/) && score;
+                },
+                wordOneNumber : function (options, word, score) {
+                    return word.match(/\d+/) && score;
+                },
+                wordThreeNumbers : function (options, word, score) {
+                    return word.match(/(.*[0-9].*[0-9].*[0-9])/) && score;
+                },
+                wordOneSpecialChar : function (options, word, score) {
+                    return word.match(/.[!,@,#,$,%,\^,&,*,?,_,~]/) && score;
+                },
+                wordTwoSpecialChar : function (options, word, score) {
+                    return word.match(/(.*[!,@,#,$,%,\^,&,*,?,_,~].*[!,@,#,$,%,\^,&,*,?,_,~])/) && score;
+                },
+                wordUpperLowerCombo : function (options, word, score) {
+                    return word.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/) && score;
+                },
+                wordLetterNumberCombo : function (options, word, score) {
+                    return word.match(/([a-zA-Z])/) && word.match(/([0-9])/) && score;
+                },
+                wordLetterNumberCharCombo : function (options, word, score) {
+                    return word.match(/([a-zA-Z0-9].*[!,@,#,$,%,\^,&,*,?,_,~])|([!,@,#,$,%,\^,&,*,?,_,~].*[a-zA-Z0-9])/) && score;
+                }
+            }
+        },
+
+        setProgressBar = function ($el, score) {
+            var options = $el.data("pwstrength"),
+                progressbar = options.progressbar,
+                $verdict;
+
+            if (options.showVerdicts) {
+                if (options.viewports.verdict) {
+                    $verdict = $(options.viewports.verdict).find(".password-verdict");
+                } else {
+                    $verdict = $el.parent().find(".password-verdict");
+                    if ($verdict.length === 0) {
+                        $verdict = $('<span class="password-verdict"></span>');
+                        $verdict.insertAfter($el);
+                    }
+                }
+            }
+
+            if (score < options.scores[0]) {
+                progressbar.addClass("progress-danger").removeClass("progress-warning").removeClass("progress-success");
+                progressbar.find(".bar").css("width", "5%");
+                if (options.showVerdicts) {
+                    $verdict.text(options.verdicts[0]);
+                }
+            } else if (score >= options.scores[0] && score < options.scores[1]) {
+                progressbar.addClass("progress-danger").removeClass("progress-warning").removeClass("progress-success");
+                progressbar.find(".bar").css("width", "25%");
+                if (options.showVerdicts) {
+                    $verdict.text(options.verdicts[1]);
+                }
+            } else if (score >= options.scores[1] && score < options.scores[2]) {
+                progressbar.addClass("progress-warning").removeClass("progress-danger").removeClass("progress-success");
+                progressbar.find(".bar").css("width", "50%");
+                if (options.showVerdicts) {
+                    $verdict.text(options.verdicts[2]);
+                }
+            } else if (score >= options.scores[2] && score < options.scores[3]) {
+                progressbar.addClass("progress-warning").removeClass("progress-danger").removeClass("progress-success");
+                progressbar.find(".bar").css("width", "75%");
+                if (options.showVerdicts) {
+                    $verdict.text(options.verdicts[3]);
+                }
+            } else if (score >= options.scores[3]) {
+                progressbar.addClass("progress-success").removeClass("progress-warning").removeClass("progress-danger");
+                progressbar.find(".bar").css("width", "100%");
+                if (options.showVerdicts) {
+                    $verdict.text(options.verdicts[4]);
+                }
+            }
+        },
+
+        calculateScore = function ($el) {
+            var self = this,
+                word = $el.val(),
+                totalScore = 0,
+                options = $el.data("pwstrength");
+
+            $.each(options.rules, function (rule, active) {
+                if (active === true) {
+                    var score = options.ruleScores[rule],
+                        result = options.validationRules[rule](options, word, score);
+                    if (result) {
+                        totalScore += result;
+                    }
+                }
+            });
+            setProgressBar($el, totalScore);
+            return totalScore;
+        },
+
+        progressWidget = function () {
+        },
+
+        methods = {
+            init: function (settings) {
+                var self = this,
+                    allOptions = $.extend(options, settings);
+
+                return this.each(function (idx, el) {
+                    var $el = $(el),
+                        progressbar,
+                        verdict;
+
+                    $el.data("pwstrength", allOptions);
+
+                    $el.on("keyup", function (event) {
+                        var options = $el.data("pwstrength");
+                        options.errors = [];
+                        calculateScore.call(self, $el);
+                        if ($.isFunction(options.onKeyUp)) {
+                            options.onKeyUp(event);
+                        }
+                    });
+
+                    progressbar = $(progressWidget());
+                    if (allOptions.viewports.progress) {
+                        $(allOptions.viewports.progress).append(progressbar);
+                    } else {
+                        progressbar.insertAfter($el);
+                    }
+                    progressbar.find(".bar").css("width", "0%");
+                    $el.data("pwstrength").progressbar = progressbar;
+
+                    if (allOptions.showVerdicts) {
+                        verdict = $('<span class="password-verdict">' + allOptions.verdicts[0] + '</span>');
+                        if (allOptions.viewports.verdict) {
+                            $(allOptions.viewports.verdict).append(verdict);
+                        } else {
+                            verdict.insertAfter($el);
+                        }
+                    }
+
+                    if ($.isFunction(allOptions.onLoad)) {
+                        allOptions.onLoad();
+                    }
+                });
+            },
+
+            destroy: function () {
+				
+                this.each(function (idx, el) {
+                    var $el = $(el);
+                    $el.parent().find("span.password-verdict").remove();
+                    $el.parent().find("div.progress").remove();
+                    $el.parent().find("ul.error-list").remove();
+                    $el.removeData("pwstrength");
+                });
+            },
+
+            forceUpdate: function () {
+                var self = this;
+                this.each(function (idx, el) {
+                    var $el = $(el),
+                        options = $el.data("pwstrength");
+                    options.errors = [];
+                    calculateScore.call(self, $el);
+                });
+            },
+
+            outputErrorList: function () {
+                this.each(function (idx, el) {
+                    var output = '<ul class="error-list">',
+                        $el = $(el),
+                        errors = $el.data("pwstrength").errors,
+                        viewports = $el.data("pwstrength").viewports,
+                        verdict;
+                    $el.parent().find("ul.error-list").remove();
+
+                    if (errors.length > 0) {
+                        $.each(errors, function (i, item) {
+                            output += '<li>' + item + '</li>';
+                        });
+                        output += '</ul>';
+                        if (viewports.errors) {
+                            $(viewports.errors).html(output);
+                        } else {
+                            output = $(output);
+                            verdict = $el.parent().find("span.password-verdict");
+                            if (verdict.length > 0) {
+                                el = verdict;
+                            }
+                            output.insertAfter(el);
+                        }
+                    }
+                });
+            },
+
+            addRule: function (name, method, score, active) {
+                this.each(function (idx, el) {
+                    var options = $(el).data("pwstrength");
+                    options.rules[name] = active;
+                    options.ruleScores[name] = score;
+                    options.validationRules[name] = method;
+                });
+            },
+
+            changeScore: function (rule, score) {
+                this.each(function (idx, el) {
+                    $(el).data("pwstrength").ruleScores[rule] = score;
+                });
+            },
+
+            ruleActive: function (rule, active) {
+                this.each(function (idx, el) {
+                    $(el).data("pwstrength").rules[rule] = active;
+                });
+            }
+        };
+
+    $.fn.pwstrength = function (method) {
+        var result;
+        if (methods[method]) {
+            result = methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+        } else if (typeof method === "object" || !method) {
+            result = methods.init.apply(this, arguments);
+        } else {
+            $.error("Method " +  method + " does not exist on jQuery.pwstrength");
+        }
+        return result;
+    };
+}(jQuery));
+			
 			$(document).ready(function() {
 			  var inputTextToSave = $("#inputTextToSave");
 			  var counter     = $("#counter");
@@ -84,8 +857,6 @@
 	
 	
 	<body>
-		
-		
 		<% provide(:title, "Encrypt or Decrypt a message!") %>
 
 		<h1>Encrypt or decrypt a message, <% if current_user.nil? %> visitor! <% else %><%= current_user.name %>!<% end %></h1>
@@ -99,9 +870,10 @@
 					<% if current_user.nil? %>
 						<%= f.select :key, options_for_select([['Odysseus',1],['Homer',2],['Atlas',3],['Pleione',4]]) %>
 					<% else %>
-						<%= f.text_field :key, class: 'form-control', :placeholder => "We suggest you something that is known only from you and from your receiver" %>
+						<%= f.password_field :key, :id => "password", class: 'form-control', :placeholder => "We suggest you something that is known only from you and from your receiver" %>
+						<!-- <input type="password" id="password" /> -->
 					<% end %>
-				
+				<br><br>
 					<%= f.label :messaggio, "Message" %>
 					<% if current_user.nil? %>
 						<%= f.text_area :messaggio, id: "inputTextToSave", class: 'form-control', :placeholder => "Insert a message to be encrypted" %>Chars left: <span id="counter" data-maximum-length="<%= 15 %>"><%= 15 %></span><br><br>
