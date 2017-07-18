@@ -7,7 +7,7 @@
  
   <%= form_for Site.find(1) do |f| %>
      <%= f.label :suspended, class: "checkbox inline" do %>
-     <%= f.check_box :suspended %>
+     <%= f.check_box :suspended, id: 'suspended' %>
      <span>Suspend web site</span>
      <% end %>
      <br>

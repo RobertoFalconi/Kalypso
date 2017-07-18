@@ -6,5 +6,6 @@ When(/^I go to lost password page$/) do
 end
 
 Then(/^I should be able to restore password$/) do
-  assert page.has_content?("Encrypt")
+  visit restore_path
+  assert page.has_content?("Restore password")
 end

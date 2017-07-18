@@ -61,7 +61,7 @@ end
 	
 def suspend
     if current_user.admin? 
-      Site.find(1).update_attributes(suspended: true)
+      Site.first.update_attributes(suspended: true)
 	  flash[:success] = "Kalypso updated"
       redirect_to root_path
     end
@@ -69,7 +69,7 @@ def suspend
     
   def unsuspend
     if current_user.admin? 
-      Site.find(1).update_attributes(suspended: false)
+      Site.first.update_attributes(suspended: false)
 	  flash[:success] = "Kalypso updated"
       redirect_to root_path
     end

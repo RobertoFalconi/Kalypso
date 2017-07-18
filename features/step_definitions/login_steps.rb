@@ -6,9 +6,10 @@ Given /^I go to login page$/ do
 end
 
 Then /^I should be able to login$/ do
-    user = User.find_by_name('Encrypt or decrypt')
+	visit messages_path
+    assert page.has_content?("Encrypt or decrypt")
 end
 
 Then /^I should be able to logout$/ do
-    user = User.find_by_name('Log out')
+    session_logout = User.find_by_name('Log out')
 end
