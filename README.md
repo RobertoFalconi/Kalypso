@@ -9,9 +9,9 @@
 
 ### How to run tests  
 
-`git clone https://github.com/RobertoFalconi95/Kalypso  
-cd Kalypso  
-rails db:migrate  
-rails db:seed  
-bundle exec cucumber  
-bundle exec rspec  `
+`git clone https://github.com/RobertoFalconi95/Kalypso`   
+`cd Kalypso`  
+`rails db:migrate`  
+`rails db:seed`  
+`bundle exec cucumber`  
+`bundle exec rspec`  
