@@ -1,7 +1,7 @@
 # README
 
-Hi everyone!
-This is a project originally made by Roberto Falconi and Salvatore Licitra for the course "Software Architecture and Cybersecurity Lab" and its teacher Luigi Freda, based at Sapienza - University of Rome.
+Hi everyone!  
+This is a project originally made by Roberto Falconi and Salvatore Licitra for the course "Software Architecture and Cybersecurity Lab" and its teacher Massimo Mecella and Leonardo Querzoni, based at Sapienza - University of Rome.
 
 The code is written in Ruby (v2.4.x) on Rails (v5.x).
 
