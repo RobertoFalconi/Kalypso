@@ -1,7 +1,7 @@
 When(/^I go to contact page$/) do
-  visit root_path
+  visit contacts_path
 end
 
 Then(/^I should be able to use the form$/) do
-  assert page.has_content?("Welcome to Kalypso")
+  assert page.has_content?("Contact Us")
 end

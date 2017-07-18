@@ -20,7 +20,7 @@ class KalypsoController < ApplicationController
   def suspended
     if !current_user.nil? && current_user.admin? 
       redirect_to suspended_path unless request.fullpath == '/suspended'
-    elsif Site.find(1).suspended? && (current_user.nil? || !current_user.admin?)
+    elsif Site.first.suspended? && (current_user.nil? || !current_user.admin?)
       redirect_to suspended_path unless request.fullpath == '/suspended'
     else redirect_to root_path
     end
@@ -28,14 +28,14 @@ class KalypsoController < ApplicationController
 
   def suspend
     if current_user.admin? 
-      Site.find(1).update_attributes(suspended: true)
+      Site.first.update_attributes(suspended: true)
       redirect_to user_path
     end
   end
     
   def unsuspend
     if current_user.admin? 
-      Site.find(1).update_attributes(suspended: false)
+      Site.first.update_attributes(suspended: false)
       redirect_to user_path
     end
   end

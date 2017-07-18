@@ -860,7 +860,7 @@
 		<% provide(:title, "Encrypt or Decrypt a message!") %>
 
 		<h1>Encrypt or decrypt a message, <% if current_user.nil? %> visitor! <% else %><%= current_user.name %>!<% end %></h1>
-		<% if current_user.nil? %><h4><center><%= link_to "Sign up", signup_path %> or <%= link_to "Log in", login_path %> to choose your own encryption key</center></h4><% end %>
+		<% if current_user.nil? %><h4><center><%= link_to "Sign up", signup_path %> or <%= link_to "Login", login_path %> to choose your own encryption key</center></h4><% end %>
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
 				

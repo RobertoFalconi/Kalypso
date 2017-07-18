@@ -7,24 +7,24 @@
   <%= render 'shared/error_messages', object: @user %>
 
   <%= f.label :name %>
-  <%= f.text_field :name, class: 'form-control' %>
+  <%= f.text_field :name, class: 'form-control', id: 'name' %>
 
   <%= f.label :email %>
-  <%= f.email_field :email, class: 'form-control' %>
+  <%= f.email_field :email, class: 'form-control', id: 'email' %>
 
   <%= f.label :password %>
-  <%= f.password_field :password, class: 'form-control' %>
+  <%= f.password_field :password, class: 'form-control', id: 'password' %>
 
   <%= f.label :password_confirmation, "Confirmation" %>
-  <%= f.password_field :password_confirmation, class: 'form-control' %>
+  <%= f.password_field :password_confirmation, class: 'form-control', id: 'password_confirmation' %>
   
   <%= f.label :question %>
   <%= f.select :question, options_for_select([['La tua band preferita?',1],['Il lavoro di tuo nonno?',2],['Il nome del tuo primo animale domestico?',3],['Il tuo film preferito?',4]]) %>
 	  
   <%= f.label :answer %>
-  <%= f.text_field :answer, class: 'form-control' %>	  
+  <%= f.text_field :answer, class: 'form-control', id: 'answer' %>	  
 
-  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+  <%= f.submit yield(:button_text), class: "btn btn-primary", id: 'Create my account' %>
 
 <% end %>
 

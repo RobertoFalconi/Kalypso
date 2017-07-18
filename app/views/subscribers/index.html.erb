@@ -1,7 +1,7 @@
 <% provide(:title, "Get Updates") %>
 
 <% if cookies[:saved_subscriver] %>
-  <h1>Thanks for subscribing to the mailing list!<h1>
+  <h1>Thanks for subscribing to newsletter!<h1>
 
 <% else %>
   
@@ -10,7 +10,7 @@
       <%= form_for @subscriber do |f| %>
         <%= render 'shared/subscribes_error_messages' %>
       <% if current_user.nil? || !current_user.admin? %>
-		<h1>Subscribe to receive new post in your inbox!</h1>
+		<h1>Subscribe to receive newsletter!</h1>
 	<%= f.label :name %>
 	<%= f.text_field :name, class: 'form-control' %>
 
