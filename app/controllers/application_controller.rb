@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :banned?
   before_action :suspended?
   before_action :check?
-  before_action :check1?
+  #before_action :check1?
   
  protect_from_forgery with: :exception
   include SessionsHelper
