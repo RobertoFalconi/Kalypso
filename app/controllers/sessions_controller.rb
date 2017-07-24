@@ -26,8 +26,8 @@ def restored
 	  redirect_to edit_user_path(user)
 	  flash[:danger] = "Restore your password now!"
 	else
-	   flash.now[:danger] = 'Invalid email/question/answer combination'
-       render 'new'
+      redirect_to restore_path
+      flash[:error] = 'Invalid email/question/answer combination'
     end
 end
 

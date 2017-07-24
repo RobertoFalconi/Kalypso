@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
 	skip_before_action :verify_authenticity_token, :only => :create
 	
-  require 'gibberish'
+    require 'gibberish'
 
 	def get_time()
 		now = Time.now           # Current time
@@ -20,54 +20,61 @@ class MessagesController < ApplicationController
 		return time
 	end
 	
-  def new
-    @message = Message.new
-  end
+    def new
+        @message = Message.new
+    end
 
-  def create
-	  mess = Message.new(message_params)
-	if params[:commit] == 'Encrypt message'
-		mess = Message.new(message_params)
-		@message = Message.new(:key => mess.key, :messaggio=> encrypt(mess.messaggio, mess.key, mess.timeout), :timeout=> mess.timeout)
-	elsif params[:commit] == 'Decrypt message'
-		mess = Message.new(message_params)
-		@message = Message.new(:key => mess.key, :messaggio=> decrypt(mess.messaggio, mess.key), :timeout=> mess.timeout)
-	elsif params[:commit] == "Download qrcode"
-		send_file 'https://api.qrserver.com/v1/create-qr-code/?data='+@message.messaggio+'&amp;size=300x300', type: 'image/png', disposition: 'attachment'	
-	#elsif params[:commit] == 'Upload message'
-	#	mess = Message.new(message_params)
-	#	@message = Message.new(:key => mess.key, :messaggio=> decrypt2(mess.messaggio, mess.key), :timeout=> mess.timeout)
-	#elsif params[:commit] == 'Upload QRCode'
-	end
-  end
+    def create
+        mess = Message.new(message_params)
+	   if params[:commit] == 'Encrypt message'
+		  mess = Message.new(message_params)
+		  @message = Message.new(:key => mess.key, :messaggio=> encrypt(mess.messaggio, mess.key, mess.timeout), :timeout=> mess.timeout)
+	   elsif params[:commit] == 'Decrypt message'
+		  mess = Message.new(message_params)
+		  @message = Message.new(:key => mess.key, :messaggio=> decrypt(mess.messaggio, mess.key), :timeout=> mess.timeout)
+	   elsif params[:commit] == "Download qrcode"
+		  send_file 'https://api.qrserver.com/v1/create-qr-code/?data='+@message.messaggio+'&amp;size=300x300', type: 'image/png', disposition: 'attachment'	
+	   end
+    end
 	
 	private
-	
-	def message_params
-      params.require(:message).permit( :key, :messaggio, :timeout)
+    
+    def message_params
+        params.require(:message).permit( :key, :messaggio, :timeout) 
     end
 	
 	def encrypt(message, key, timeout)
-		if message == '' or key == '' or (message.length > 15 and current_user.nil?)
-			flash[:error] = 'invalid message or key'
-			redirect_to messages_path
-		else
-			cipher = Gibberish::AES.new(key)
-			if timeout == ''
-				result = cipher.encrypt(message+'@'+'9999/9999/99999')
-			else
-				result = cipher.encrypt(message+'@'+timeout)
-			end
-			return result
-		end
-	end
-
-	def decrypt (message, key) 
-		begin
+        if message == '' or key == '' or (message.length > 15 and current_user.nil?)
+            flash[:error] = 'invalid message or key'
+            redirect_to messages_path
+        else
+            cipher = Gibberish::AES.new(key)
+            if timeout == ''
+                result = cipher.encrypt(message+'@'+'9999/9999/99999')
+            else
+                result = cipher.encrypt(message+'@'+timeout)
+            end
+            return result
+        end
+    end
+        
+    def decrypt (message, key) 
+        begin
 			cipher = Gibberish::AES.new(key)
 			result = cipher.decrypt(message)
 			time = result.split('@')[1]
-			time = time.split('/')
+            
+            if time.include?('.') 
+               time = time.split('.')
+            end
+            if time.include?('/')  
+                time = time.split('/')
+            end
+            if time.include?('-') 
+               time = time.split('-')
+            end
+            
+			
 			now = get_time()
 			if (now[0] > time[2]) then return 'Time-out expired' end
 			if (now[0] <= time[2] and now[1] > time[0]) then return 'Time-out expired' end
@@ -79,18 +86,5 @@ class MessagesController < ApplicationController
 				flash[:error]='invalid message or key'
 		end
 	end
-			
-	def download (message, key)
-	text = encrypt(message, key)
-	File.write('prova.txt',text)
-	return text
-end
-
-def upload (filepath, key)
-	file = File.open(filepath, 'r')
-	contents = file.read
-	text = decrypt(contents, key)
-	return text
-end
 			
 end

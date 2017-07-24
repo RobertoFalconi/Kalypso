@@ -33,7 +33,13 @@ def decrypt (message, key)
 	cipher = Gibberish::AES.new(key)
 	result = cipher.decrypt(message)
 	time = result.split('@')[1]
-	time = time.split('/')
+    if time.include?('/')  
+        time = time.split('/')
+    elsif time.include?('-') 
+        time = time.split('-')
+    else 
+        time = time.split('.')
+    end
 	now = get_time()
 	if (now[0] > time[2]) then return 'Time-out expired' end
 	if (now[0] <= time[2] and now[1] > time[0]) then return 'Time-out expired' end
@@ -66,11 +72,11 @@ end
 
 #encrypt2('gino', 'kalypso')
 
-#puts decrypt('{"v":1,"adata":"","ks":256,"ct":"C/4qTA9vGfl+dLmcpw==","ts":96,"mode":"gcm","cipher":"aes","iter":100000,"iv":"Qo3xdjxdpMOL64g0","salt":"0pOXoAL9k00="}', '')
+#puts decrypt('{"v":1,"adata":"","ks":256,"ct":"Fp1X2AlrryE/55f822pd3GUX2CsBAhaaDiiyKA==","ts":96,"mode":"gcm","cipher":"aes","iter":100000,"iv":"6HxkBl1MsVKOTFtk","salt":"dTit4kR7rls="}', 'wrong key')
 		
 print get_time()
 		
-puts decrypt2('{"v":1,"adata":"","ks":256,"ct":"C/4qTA9vGfl+dLmcpw==","ts":96,"mode":"gcm","cipher":"aes","iter":100000,"iv":"Qo3xdjxdpMOL64g0","salt":"0pOXoAL9k00="}', '')
+#puts decrypt2('{"v":1,"adata":"","ks":256,"ct":"C/4qTA9vGfl+dLmcpw==","ts":96,"mode":"gcm","cipher":"aes","iter":100000,"iv":"Qo3xdjxdpMOL64g0","salt":"0pOXoAL9k00="}', '')
 
 #puts download('tvb','infinito')
 

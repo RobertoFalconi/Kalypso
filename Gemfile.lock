@@ -1,3 +1,50 @@
+GIT
+  remote: https://github.com/rspec/rspec-core.git
+  revision: a8ca431169210500a4d4ced9c10857002ec6de9d
+  branch: master
+  specs:
+    rspec-core (3.7.0.pre)
+      rspec-support (= 3.7.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-expectations.git
+  revision: b1c83b771b7f65b6e7f9ba8a34eda2c760148d3d
+  branch: master
+  specs:
+    rspec-expectations (3.7.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.7.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-mocks.git
+  revision: d8e2d4778eeb4117bea8a1bc9135a44720e65505
+  branch: master
+  specs:
+    rspec-mocks (3.7.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.7.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-rails.git
+  revision: ac759a3691242b971ee8388ea77a8051d6fe15b4
+  branch: master
+  specs:
+    rspec-rails (3.7.0.pre)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (= 3.7.0.pre)
+      rspec-expectations (= 3.7.0.pre)
+      rspec-mocks (= 3.7.0.pre)
+      rspec-support (= 3.7.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-support.git
+  revision: 491e7236856d93103718a8e30e8b9a415fbad28b
+  branch: master
+  specs:
+    rspec-support (3.7.0.pre)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -244,6 +291,11 @@ DEPENDENCIES
   puma (~> 3.7)
   rails (~> 5.1.1)
   rails-controller-testing
+  rspec-core!
+  rspec-expectations!
+  rspec-mocks!
+  rspec-rails!
+  rspec-support!
   sass
   sass-rails (~> 5.0)
   selenium-webdriver

@@ -53,9 +53,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 	q = params[:user][:question]
-	@user.update_attributes(question: q)
-	@user.update_attributes(answer: encrypt(params[:user][:answer], 'kalypso'))
-    if @user.save
+	if @user.save
+      @user.update_attributes(question: q)
+	  @user.update_attributes(answer: encrypt(params[:user][:answer], 'kalypso'))
       log_in @user
       flash[:success] = "Welcome to Kalypso!"
       redirect_to @user
