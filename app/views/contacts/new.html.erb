@@ -1,9 +1,16 @@
 <% provide(:title, "Contact Us") %>
 <h1>Contact Us</h1>
-<h2>Contact Kalypso's creators!</h2>
+
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-   		<center><a href="mailto:admin@kalypso.com?Subject=Hi%20developers" target="_top" class="btn btn-primary">Send a letter to Ogygia!</a></center>
+   		<center>
+			<% if !current_user.nil? and current_user.admin? %>
+			<h2>You're already on Ogygia!</h2>
+	  		<% else %>
+			<h2>Contact Kalypso's creators!</h2>
+			<a href="mailto:admin@kalypso.com?Subject=Hi%20developers" target="_top" class="btn btn-primary">Send a letter to Ogygia!</a>
+			<%end%>
+	  </center>
   </div>
 </div>

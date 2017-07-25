@@ -1,5 +1,5 @@
 When(/^I go to personal profile$/) do
-  visit root_path
+  visit users_path
 end
 
 Then(/^I should be able to activate the website$/) do
@@ -35,7 +35,7 @@ Then(/^I should be able to delete users$/) do
 end
 
 Then(/^I should be able to see my username in homepage$/) do
-  assert page.has_content?("Welcome to Kalypso")
+  assert page.has_content?(@user)
 end
 
 Then(/^I should be able to send newsletters$/) do
