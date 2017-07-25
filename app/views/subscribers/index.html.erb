@@ -24,8 +24,8 @@
 		
 		<center>
 			
-            <% if Subscriber.nil? %>
-		      <%= mail_to Subscriber.pluck(:email).to_s.gsub!('"','').gsub!('[','').gsub!(']','').gsub!(' ',', '), "Send a letter from Ogygia!", class: "btn btn-primary" %>
+            <% if !Subscriber.nil? %>
+		      <%= mail_to Subscriber.pluck(:email).to_s.gsub!('[','').gsub!(']','').gsub!('"',''), "Send a letter from Ogygia!", class: "btn btn-primary" %>
             <% else %>
               No subscribers :(
             <% end %>

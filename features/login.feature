@@ -5,4 +5,5 @@ So that I can become a user
 
 Scenario: Login
   When I go to login page
+  And I write email and password
   Then I should be able to login

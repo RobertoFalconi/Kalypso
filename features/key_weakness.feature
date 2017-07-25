@@ -5,4 +5,5 @@ So that I can see the weakness of my personal encryption key
 
 Scenario:
 When I go to encryption page
+And I write a personal encryption key
 Then I should be able to see the weakness of my personal encryption key

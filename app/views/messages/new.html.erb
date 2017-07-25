@@ -3,6 +3,11 @@
 	<head>
 		<script type="text/javascript" lang="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     	</script>
+			<script>
+		if (window.location.href.indexOf('reload')==-1) {
+     window.location.replace(window.location.href+'?reload');
+}
+		</script>
 		<script>
 			
 !function( $ ) {
@@ -872,14 +877,14 @@
 				<br><br>
 					<%= f.label :messaggio, "Message" %>
 					<% if current_user.nil? %>
-						<%= f.text_area :messaggio, id: "inputTextToSave", class: 'form-control', :placeholder => "Insert a message to be encrypted" %>Chars left: <span id="counter" data-maximum-length="<%= 15 %>"><%= 15 %></span><br><br>
+						<%= f.text_area :messaggio, id: "inputTextToSave", class: 'form-control', :placeholder => "Insert a message to be encrypted" %>Chars left:<span id="counter" data-maximum-length="<%= 15 %>"><%= 15 %></span><br><br>
 					<% else %>
 						<%= f.text_area :messaggio, id: "inputTextToSave", class: 'form-control', :placeholder => "Insert a message to be encrypted" %>
 					<% end %>
 
 					<%= f.label :'timeout' %>
 						<%= f.text_field :'timeout', 'data-behaviour' => 'datepicker', :placeholder => "MM/DD/AAAA" %>
-						
+			
 					<%= f.submit "Encrypt message", class: "btn btn-primary" %></br></br>
 					<%= f.submit "Decrypt message", class: "btn btn-primary" %></br></br>
 				<% end %>

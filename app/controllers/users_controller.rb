@@ -107,6 +107,9 @@ class UsersController < ApplicationController
 	
 	def encrypt(message, key)
 		cipher = Gibberish::AES.new(key)
+		if message == ''
+			return
+		end
 		result = cipher.encrypt(message)
 		return result
 	end
