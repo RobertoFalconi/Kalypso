@@ -5,8 +5,6 @@ Given /^the admin logged in$/ do
     click_button 'Login'
 end
 
-
-
 When /^I go to suspended page$/ do
 	visit specialoptions_path
 end

@@ -3,5 +3,5 @@ When(/^I go to faq page$/) do
 end
 
 Then(/^I should be able to read faq$/) do
-  assert page.has_content?("F.A.Q.")
+  page.has_content?("F.A.Q.")
 end

@@ -3,6 +3,6 @@ When(/^I go to about page$/) do
 end
 
 Then(/^I should be able to read about$/) do
-  assert page.has_content?("About Us")
+  page.has_content?("About Us")
 end
 

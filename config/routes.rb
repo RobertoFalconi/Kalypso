@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   get    'faq'              => 'kalypso#faq'
   get	 'suspended'        => 'kalypso#suspended'
   get	 'specialoptions'   => 'kalypso#specialoptions'
+  get    'edittest'         => 'kalypso#edittest'
   get    'signup'           => 'users#new'
 	
   get    'login'            => 'sessions#new'
