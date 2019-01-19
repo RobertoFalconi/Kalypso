@@ -3,9 +3,13 @@
 Hi everyone!  
 This is a project originally made by Roberto Falconi for the course "Software Architecture and Cybersecurity" and its teachers Massimo Mecella and Leonardo Querzoni, based at Sapienza - University of Rome.
 
-The code is written in Ruby (v2.4.x) on Rails (v5.x).
-
 This project goal is to let everyone to encrypt or to decrypt messages in order to make a real privacy-oriented system.
+
+# Useful links
+- Portfolio: http://www.robertodaguarcino.com  
+- LinkedIn: https://www.linkedin.com/in/roberto-falconi  
+- GitHub: https://github.com/RobertoFalconi  
+- SlideShare: https://www.slideshare.net/RobertoFalconi4  
 
 ### How to run server  
 Open a terminal anywhere on your device, then:  
