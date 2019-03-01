@@ -13,7 +13,7 @@ This project goal is to let everyone to encrypt or to decrypt messages in order 
 
 ### How to run server  
 Open a terminal anywhere on your device, then:  
-`git clone https://github.com/RobertoFalconi95/Kalypso`  
+`git clone https://github.com/RobertoFalconi/Kalypso`  
 `cd Kalypso`  
 `rails db:migrate`  
 `rails db:seed`  
@@ -21,7 +21,7 @@ Open a terminal anywhere on your device, then:
 
 ### How to run tests  
 
-`git clone https://github.com/RobertoFalconi95/Kalypso`   
+`git clone https://github.com/RobertoFalconi/Kalypso`   
 `cd Kalypso`  
 `rails db:migrate`  
 `rails db:seed`  
