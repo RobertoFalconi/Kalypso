@@ -6,7 +6,7 @@ This is a project originally made by Roberto Falconi for the course "Software Ar
 This project goal is to let everyone to encrypt or to decrypt messages in order to make a real privacy-oriented system.
 
 # Useful links
-- Portfolio: http://www.robertodaguarcino.com  
+- Portfolio: https://robertodaguarcino.com  
 - LinkedIn: https://www.linkedin.com/in/roberto-falconi  
 - GitHub: https://github.com/RobertoFalconi  
 - SlideShare: https://www.slideshare.net/RobertoFalconi4  
